@@ -1,0 +1,305 @@
+﻿@{
+    ViewBag.Title = "Anexo";
+}
+
+
+<ol class="breadcrumb">
+    <li><a href="/Home/Index">Principal</a></li>
+    <li class="active">Anexar arquivos</li>
+</ol>
+
+
+<div class="container" style="margin-top:20px;">
+
+
+    <div class="row">
+        <div class="widget widget-gray">
+            <!-- TYPE PANEL -->
+            <div class="widget-head">
+                <!-- HEAD PANEL -->
+                <h4 class="heading"><i class="fa fa-clipboard"></i> Anexar arquivo</h4>
+            </div><!-- /HEAD PANEL -->
+
+            <div class="widget-body" id="widget-body2">
+                <!-- CONTENT PANEL -->
+
+                <form>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do cliente">
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <select class="form-control" id="exampleSelect1">
+                                <option>Filtrar por</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i> Buscar cliente</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <span class="clear"></span>
+                <div id="gridAnexo"></div>
+
+            </div><!-- /CONTENT PANEL -->
+
+            <div class="widget-footer">
+                <!-- FOOTER PANEL-->
+                 <a href="#" id="toggle2" class="fa fa-chevron-up fa-1x" title="" ><i></i></a>
+            </div><!-- /FOOTER PANEL-->
+
+        </div> <!-- /TYPE PANEL -->
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalAnexo" tabindex="-1" role="dialog" aria-labelledby="Janela" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Anexar Arquivo</h4>
+            </div>
+            <div class="modal-body modalScroll">
+
+
+                <form enctype="multipart/form-data">
+
+
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label for="tipo">Tipo de documento</label>
+                            <select class="form-control" id="tipo">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr class="style4" />
+
+                    <input id="file" class="file" type="file" multiple data-min-file-count="1">
+                    <br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </form>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Como a navegação recarrega a pagina esse script tem que ser usada em cada view -->
+@section Scripts {
+    <script type="text/javascript">
+        $('.nav-pills li:eq(1) a').tab('show');
+
+        $("#file").fileinput({
+           
+            language: 'pt-BR',
+            uploadUrl: '#', // you must set a valid URL here else you will get an error
+            allowedFileExtensions: ['jpg', 'png', 'gif'],
+            overwriteInitial: false,
+            maxFileSize: 2000,
+            previewSettings: {
+                image: { width: "150px", height: "125px" },
+                html: { width: "150px", height: "125px" },
+                text: { width: "150px", height: "125px" },
+                object: { width: "150px", height: "125px" }
+            },
+            layoutTemplates :{
+                actions: '<div class="file-actions">\n' +
+           '    <div class="file-footer-buttons">\n' +
+           '        {upload} {delete}' +
+           '    </div>\n' +
+           '    {drag}\n' +
+           '    <div class="file-upload-indicator" title="{indicatorTitle}">{indicator}</div>\n' +
+           '    <div class="clearfix"></div>\n' +
+           '</div>',
+            },
+            maxFileCount: 2,
+            //allowedFileTypes: ['image', 'video', 'flash'],
+            slugCallback: function (filename) {
+                return filename.replace('(', '_').replace(']', '_');
+            }
+        });
+
+
+        $("#gridAnexo").bs_grid({
+            pageNum: 1,
+            rowsPerPage: 10,
+            maxRowsPerPage: 100, ajaxFetchDataURL: "/Home/Teste2",
+            row_primary_key: "id",
+            rowSelectionMode: false, // "multiple", "single", false
+
+
+            /**
+             * MANDATORY PROPERTIES: field
+             * UNIQUE PROPERTIES: field
+             * {field: "customer_id", header: "Code", visible: "no", is_function: "no", "headerClass": "th_code hidden-xs", "dataClass": "td_code hidden-xs"},
+             */
+            columns: [
+                    { field: "id", header: "Id", visible: "no" },
+                    { field: "firstname", header: "Nome" },
+                    { field: "lastname", header: "Sobrenome" },
+                    { field: "cpf", header: "cpf", visible: "yes" },
+                    { field: "anexo", header: "anexos", visible: "yes" },
+                    { field: "gender", header: "teste", visible: "yes" },
+                    { field: "detalhes", header: "Actions" }
+            ],
+
+            /**
+             * MANDATORY PROPERTIES: field, order
+             * UNIQUE PROPERTIES: field
+             * order is one of "ascending", "descending", "none"
+             * {sortingName: "Code", field: "customer_id", order: "none"},
+             */
+            sorting: [
+                      { sortingName: "nome", field: "lastname", order: "none" },
+                      { sortingName: "firstname", field: "firstname", order: "ascending" }
+            ],
+
+            /**
+             * See bs_pagination plugin documentation
+             */
+
+            paginationOptions: {
+                containerClass: "well pagination-container",
+                visiblePageLinks: 5,
+                showGoToPage: true,
+                showRowsPerPage: true,
+                showRowsInfo: true,
+                showRowsDefaultInfo: true,
+                disableTextSelectionInNavPane: true,
+                showPreferences: true,
+                showLabelCurrentPage: true
+            }, // "currentPage", "rowsPerPage", "maxRowsPerPage", "totalPages", "totalRows", "bootstrap_version", "onChangePage" will be ignored
+
+
+            /**
+             * See jui_filter_rules plugin documentation
+             */
+            filterOptions: {
+                filters: [],
+                filter_rules: []
+            }, // "bootstrap_version", "onSetRules", "onValidationError" will be ignored
+
+            useFilters: false,
+            showRowNumbers: false,
+            showSortingIndicator: true,
+            useSortableLists: false,
+            customHTMLelementID1: "",
+            customHTMLelementID2: "",
+
+            /* STYLES ----------------------------------------------------*/
+            bootstrap_version: "3",
+
+            // bs 3
+            containerClass: "grid_container",
+            noResultsClass: "alert alert-warning no-records-found",
+
+            toolsClass: "tools",
+
+            columnsListLaunchButtonClass: "btn btn-default dropdown-toggle",
+            columnsListLaunchButtonIconClass: "glyphicon glyphicon-th",
+            columnsListClass: "dropdown-menu dropdown-menu-right",
+            columnsListLabelClass: "columns-label",
+            columnsListCheckClass: "col-checkbox",
+            columnsListDividerClass: "divider",
+            columnsListDefaultButtonClass: "btn btn-primary btn-xs btn-block",
+
+            sortingListLaunchButtonIconClass: "glyphicon glyphicon-sort",
+            sortingLabelCheckboxClass: "radio-inline",
+            sortingNameClass: "sorting-name",
+
+            selectButtonIconClass: "glyphicon  glyphicon-check",
+            selectedRowsClass: "selected-rows",
+
+            filterToggleButtonIconClass: "glyphicon glyphicon-filter",
+            filterToggleActiveClass: "btn-info",
+
+            sortingIndicatorAscClass: "glyphicon glyphicon-chevron-up text-muted",
+            sortingIndicatorDescClass: "glyphicon glyphicon-chevron-down text-muted",
+
+            dataTableContainerClass: "table-responsive",
+            dataTableClass: "table table-bordered table-hover",
+            commonThClass: "th-common",
+            selectedTrClass: "warning",
+
+            filterContainerClass: "well filters-container",
+            filterToolsClass: "",
+            filterApplyBtnClass: "btn btn-primary btn-sm filters-button",
+            filterResetBtnClass: "btn btn-default btn-sm filters-button",
+
+            // prefixes
+            tools_id_prefix: "tools_",
+            columns_list_id_prefix: "columns_list_",
+            sorting_list_id_prefix: "sorting_list_",
+            sorting_radio_name_prefix: "sort_radio_",
+            selected_rows_id_prefix: "selected_rows_",
+            selection_list_id_prefix: "selection_list_",
+            filter_toggle_id_prefix: "filter_toggle_",
+
+            table_container_id_prefix: "tbl_container_",
+            table_id_prefix: "tbl_",
+
+            no_results_id_prefix: "no_res_",
+
+            custom_html1_id_prefix: "custom1_",
+            custom_html2_id_prefix: "custom2_",
+
+            pagination_id_prefix: "pag_",
+            filter_container_id_prefix: "flt_container_",
+            filter_rules_id_prefix: "flt_rules_",
+            filter_tools_id_prefix: "flt_tools_",
+
+            // misc
+            debug_mode: "no",
+
+            // events
+            onCellClick: function () {
+            },
+            onRowClick: function () {
+            },
+            onDatagridError: function () {
+            },
+            onDebug: function () {
+            },
+            onDisplay: function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            }
+        });
+
+        
+        $("#modalAnexo").draggable({
+            handle: ".modal-header"
+        });
+
+    </script>
+}
+
+

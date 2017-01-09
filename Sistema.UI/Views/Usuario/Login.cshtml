@@ -1,0 +1,68 @@
+﻿
+@model Sistema.Domain.Entities.Usuario
+
+@{ 
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniben</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body class="grad">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                <div class="account-wall">
+                    <img src="~/Content/images/logo_original.png" alt="" class="img-responsive" style="margin:0 auto 30px auto; ">
+                                       
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "form-signin" }))
+                    {
+                        @Html.AntiForgeryToken();
+                        @Html.ValidationSummary(true);
+
+                        if (@ViewBag.Message != null)
+                        {
+                            @ViewBag.Message;
+                        }
+
+                        @Html.TextBoxFor(a=> a.Login,new { @class= "form-control", placeholder = "Login", required = "required" });
+                        @Html.ValidationMessageFor(a => a.Login);
+                        @Html.PasswordFor(a => a.Senha, new { @class = "form-control", placeholder = "Senha", required = "required" });
+                        @Html.ValidationMessageFor(a => a.Senha);
+                        <button class="btn btn-lg btn-primary btn-block" style="margin-top:40px;" type="submit">Logar no sistema </button>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/grid")
+    @Scripts.Render("~/bundles/sistema")
+    @Scripts.Render("~/bundles/pagination")
+    @Scripts.Render("~/bundles/jui_filter")
+    @Scripts.Render("~/bundles/mascaras")
+    @Scripts.Render("~/bundles/fileinput")
+    @Scripts.Render("~/bundles/multiselect")
+
+
+    @section Scripts{
+
+        @Scripts.Render("~/bundles/jqueryval");
+
+    }
+
+</body>
+</html>

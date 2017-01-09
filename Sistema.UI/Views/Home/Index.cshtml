@@ -1,0 +1,245 @@
+﻿@{
+    ViewBag.Title = "Principal";
+}
+
+
+<ol class="breadcrumb">
+    <li class="active">Principal</li>
+</ol>
+
+
+<div class="container" style="margin-top:20px;">
+
+    
+    <div class="row">
+        <div class="widget widget-gray">
+            <!-- TYPE PANEL -->
+            <div class="widget-head">
+                <!-- HEAD PANEL -->
+                <h4 class="heading"><i class="fa fa-archive"></i>  Buscar cliente</h4>
+            </div><!-- /HEAD PANEL -->
+
+            <div class="widget-body" id="widget-body2">
+                <!-- CONTENT PANEL -->
+
+                <form>
+                    <div class="col-lg-8">
+                        <div class="form-group">                          
+                            <input type="text" class="form-control" id="busca" placeholder="Nome do cliente">
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-group">                            
+                            <select class="form-control" id="filtro">
+                                <option value="-1">Filtra busca por</option>
+                                <option value="nome">Nome</option>
+                                <option value="cpf">CPF</option>                               
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="form-group">                           
+                            <button type="button" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i> Buscar cliente</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <span class="clear"></span>
+                <div id="grid"></div>
+               
+            </div><!-- /CONTENT PANEL -->
+
+            <div class="widget-footer">
+                <!-- FOOTER PANEL-->
+                <a href="#" class="fa fa-minus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-MINUS-CIRCLE"><i></i></a>
+                <a href="#" class="fa fa-pencil fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PENCIL"><i></i></a>
+                <a href="#" class="fa fa-search fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-SEARCH"><i></i></a>
+                <a href="#" class="fa fa-plus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
+                <a href="#" id="toggle2" class="fa fa-chevron-up fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
+            </div><!-- /FOOTER PANEL-->
+
+        </div> <!-- /TYPE PANEL -->
+    </div>
+
+</div>
+
+
+<!-- Como a navegação recarrega a pagina esse script tem que ser usada em cada view -->
+@section Scripts {
+    <script type="text/javascript">
+
+        $("#filtro").on("change", function () {
+            
+            if($(this).val() == 'nome'){
+                $("#busca").unmask();
+            } else {
+                $("#busca").mask("999.999.999-99");
+            
+            }
+        });
+
+        $('.nav-pills li:eq(0) a').tab('show');
+
+
+
+
+        /**
+        *Grid pagina inicial
+        *
+        *
+        */
+
+
+
+        $("#grid").bs_grid({
+            pageNum: 1,
+            rowsPerPage: 10,
+            maxRowsPerPage: 100, ajaxFetchDataURL: "/Home/Teste",
+            row_primary_key: "id",
+            rowSelectionMode: "single", // "multiple", "single", false
+
+
+            /**
+             * MANDATORY PROPERTIES: field
+             * UNIQUE PROPERTIES: field
+             * {field: "customer_id", header: "Code", visible: "no", is_function: "no", "headerClass": "th_code hidden-xs", "dataClass": "td_code hidden-xs"},
+             */
+            columns: [
+                    { field: "id", header: "Id", visible: "no" },
+                    { field: "firstname", header: "Nome" },
+                    { field: "lastname", header: "Sobrenome" },
+                    { field: "email", header: "email", visible: "yes" },
+                    { field: "gender", header: "Data de vigência", visible: "yes" },
+                    { field: "gender", header: "teste", visible: "yes" },
+                    { field: "detalhes", header: "Actions" }
+            ],
+
+            /**
+             * MANDATORY PROPERTIES: field, order
+             * UNIQUE PROPERTIES: field
+             * order is one of "ascending", "descending", "none"
+             * {sortingName: "Code", field: "customer_id", order: "none"},
+             */
+            sorting: [
+                      { sortingName: "nome", field: "lastname", order: "none" },
+                      { sortingName: "firstname", field: "firstname", order: "ascending" }
+            ],
+
+            /**
+             * See bs_pagination plugin documentation
+             */
+
+            paginationOptions: {
+                containerClass: "well pagination-container",
+                visiblePageLinks: 5,
+                showGoToPage: true,
+                showRowsPerPage: true,
+                showRowsInfo: true,
+                showRowsDefaultInfo: true,
+                disableTextSelectionInNavPane: true,
+                showPreferences: true,
+                showLabelCurrentPage: true
+            }, // "currentPage", "rowsPerPage", "maxRowsPerPage", "totalPages", "totalRows", "bootstrap_version", "onChangePage" will be ignored
+
+
+            /**
+             * See jui_filter_rules plugin documentation
+             */
+            filterOptions: {
+                filters: [],
+                filter_rules: []
+            }, // "bootstrap_version", "onSetRules", "onValidationError" will be ignored
+
+            useFilters: false,
+            showRowNumbers: false,
+            showSortingIndicator: true,
+            useSortableLists: false,
+            customHTMLelementID1: "",
+            customHTMLelementID2: "",
+
+            /* STYLES ----------------------------------------------------*/
+            bootstrap_version: "3",
+
+            // bs 3
+            containerClass: "grid_container",
+            noResultsClass: "alert alert-warning no-records-found",
+
+            toolsClass: "tools",
+
+            columnsListLaunchButtonClass: "btn btn-default dropdown-toggle",
+            columnsListLaunchButtonIconClass: "glyphicon glyphicon-th",
+            columnsListClass: "dropdown-menu dropdown-menu-right",
+            columnsListLabelClass: "columns-label",
+            columnsListCheckClass: "col-checkbox",
+            columnsListDividerClass: "divider",
+            columnsListDefaultButtonClass: "btn btn-primary btn-xs btn-block",
+
+            sortingListLaunchButtonIconClass: "glyphicon glyphicon-sort",
+            sortingLabelCheckboxClass: "radio-inline",
+            sortingNameClass: "sorting-name",
+
+            selectButtonIconClass: "glyphicon  glyphicon-check",
+            selectedRowsClass: "selected-rows",
+
+            filterToggleButtonIconClass: "glyphicon glyphicon-filter",
+            filterToggleActiveClass: "btn-info",
+
+            sortingIndicatorAscClass: "glyphicon glyphicon-chevron-up text-muted",
+            sortingIndicatorDescClass: "glyphicon glyphicon-chevron-down text-muted",
+
+            dataTableContainerClass: "table-responsive",
+            dataTableClass: "table table-bordered table-hover",
+            commonThClass: "th-common",
+            selectedTrClass: "warning",
+
+            filterContainerClass: "well filters-container",
+            filterToolsClass: "",
+            filterApplyBtnClass: "btn btn-primary btn-sm filters-button",
+            filterResetBtnClass: "btn btn-default btn-sm filters-button",
+
+            // prefixes
+            tools_id_prefix: "tools_",
+            columns_list_id_prefix: "columns_list_",
+            sorting_list_id_prefix: "sorting_list_",
+            sorting_radio_name_prefix: "sort_radio_",
+            selected_rows_id_prefix: "selected_rows_",
+            selection_list_id_prefix: "selection_list_",
+            filter_toggle_id_prefix: "filter_toggle_",
+
+            table_container_id_prefix: "tbl_container_",
+            table_id_prefix: "tbl_",
+
+            no_results_id_prefix: "no_res_",
+
+            custom_html1_id_prefix: "custom1_",
+            custom_html2_id_prefix: "custom2_",
+
+            pagination_id_prefix: "pag_",
+            filter_container_id_prefix: "flt_container_",
+            filter_rules_id_prefix: "flt_rules_",
+            filter_tools_id_prefix: "flt_tools_",
+
+            // misc
+            debug_mode: "no",
+
+            // events
+            onCellClick: function () {
+            },
+            onRowClick: function () {
+            },
+            onDatagridError: function () {
+            },
+            onDebug: function () {
+            },
+            onDisplay: function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            }
+        });
+
+
+
+
+    </script>
+}

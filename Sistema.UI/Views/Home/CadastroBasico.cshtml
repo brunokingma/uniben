@@ -1,0 +1,275 @@
+﻿@{
+    ViewBag.Title = "Cadastro Básico";
+}
+
+
+<ol class="breadcrumb">
+    <li><a href="/Home/Index">Principal</a></li>
+    <li class="active">Cadastro Básico</li>
+</ol>
+
+
+
+
+<div class="container-fluid" style="margin-top:20px;">
+
+    <div class="row">
+
+        <div class="col-lg-6">
+
+            <div class="widget widget-gray" >
+                <!-- TYPE PANEL -->
+                <div class="widget-head">
+                    <!-- HEAD PANEL -->
+                    <h4 class="heading"><i class="fa fa-pencil-square"></i> Banco</h4>
+                </div><!-- /HEAD PANEL -->
+
+                <div class="widget-body" id="widget-body2" style="display:none;">
+                    <!-- CONTENT PANEL -->
+
+                    <form action="/Banco/Cadastrar"  class="formAjax" >
+                        <div class="form-group col-md-6">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" name="nome" placeholder="Nome" required />
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="codigo">Código</label>
+                            <input type="text" class="form-control" name="codigo" placeholder="Código" required />
+                        </div>
+
+                        <div class="offset-lg-9 col-lg-3 ">
+                            <input type="submit" class="btn btn-primary btn-sm " value="Salvar cadastro" />
+                        </div>
+                    </form>
+
+                    <span class="clear"></span>
+                    <div id="grid"></div>
+
+                </div><!-- /CONTENT PANEL -->
+
+                <div class="widget-footer">
+                    <!-- FOOTER PANEL-->
+                    <a href="#" onclick="toogle(this)" class="fa fa-chevron-up fa-1x"><i></i></a>
+                </div><!-- /FOOTER PANEL-->
+
+            </div> <!-- /TYPE PANEL -->
+
+                  
+          </div>
+
+
+     
+          <div class="col-lg-6">
+
+                <div class="widget widget-gray">
+                    <!-- TYPE PANEL -->
+                    <div class="widget-head">
+                        <!-- HEAD PANEL -->
+                        <h4 class="heading"><i class="fa fa-pencil-square"></i> Tipo de cobrança</h4>
+                    </div><!-- /HEAD PANEL -->
+
+                    <div class="widget-body" id="widget-body2" style="display:none;">
+                        <!-- CONTENT PANEL -->
+
+                        <form action="/Cobrança/Cadastrar" class="formAjax">
+                            <div class="form-group col-md-6">
+                                <label for="nome">Nome</label>
+                                <input type="text" class="form-control" name="nome" placeholder="Nome" required />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="codigo">Código</label>
+                                <input type="text" class="form-control" name="codigo" placeholder="Código" required />
+                            </div>
+
+                            <div class="offset-lg-9 col-lg-3 ">
+                                <input type="submit" class="btn btn-primary btn-sm " value="Salvar cadastro" />
+                            </div>
+                        </form>
+
+                        <span class="clear"></span>
+                        <div id="grid"></div>
+
+                    </div><!-- /CONTENT PANEL -->
+
+                    <div class="widget-footer">
+                        <!-- FOOTER PANEL-->
+                        <a href="#" onclick="toogle(this)" class="fa fa-chevron-up fa-1x"><i></i></a>
+                    </div><!-- /FOOTER PANEL-->
+
+                </div> <!-- /TYPE PANEL -->
+
+
+            </div>
+
+
+
+
+
+
+        <div class="col-lg-6">
+
+            <div class="widget widget-gray">
+                <!-- TYPE PANEL -->
+                <div class="widget-head">
+                    <!-- HEAD PANEL -->
+                    <h4 class="heading"><i class="fa fa-pencil-square"></i> Tipo de exceção</h4>
+                </div><!-- /HEAD PANEL -->
+
+                <div class="widget-body" id="widget-body2" style="display:none;">
+                    <!-- CONTENT PANEL -->
+
+                    <form action="/Excecao/Cadastrar" class="formAjax">
+                        <div class="form-group col-md-12">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" name="nome" placeholder="Nome" required />
+                        </div>
+
+                        <div class="offset-lg-9 col-lg-3 ">
+                            <input type="submit" class="btn btn-primary btn-sm " value="Salvar cadastro" />
+                        </div>
+                    </form>
+
+                    <span class="clear"></span>
+                    <div id="grid"></div>
+
+                </div><!-- /CONTENT PANEL -->
+
+                <div class="widget-footer">
+                    <!-- FOOTER PANEL-->
+                    <a href="#" onclick="toogle(this)" class="fa fa-chevron-up fa-1x"><i></i></a>
+                </div><!-- /FOOTER PANEL-->
+
+            </div> <!-- /TYPE PANEL -->
+
+
+        </div>
+
+
+
+
+
+
+        <div class="col-lg-6">
+
+            <div class="widget widget-gray">
+                <!-- TYPE PANEL -->
+                <div class="widget-head">
+                    <!-- HEAD PANEL -->
+                    <h4 class="heading"><i class="fa fa-pencil-square"></i> Modo de pagamento</h4>
+                </div><!-- /HEAD PANEL -->
+
+                <div class="widget-body" id="widget-body2" style="display:none;">
+                    <!-- CONTENT PANEL -->
+
+                    <form action="/Pagamento/CadastrarModo" class="formAjax">
+                        <div class="form-group col-md-12">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" name="nome" placeholder="Nome" required />
+                        </div>
+
+                        <div class="offset-lg-9 col-lg-3 ">
+                            <input type="submit" class="btn btn-primary btn-sm " value="Salvar cadastro" />
+                        </div>
+                    </form>
+
+                    <span class="clear"></span>
+                    <div id="grid"></div>
+
+                </div><!-- /CONTENT PANEL -->
+
+                <div class="widget-footer">
+                    <!-- FOOTER PANEL-->
+                    <a href="#" onclick="toogle(this)" class="fa fa-chevron-up fa-1x"><i></i></a>
+                </div><!-- /FOOTER PANEL-->
+
+            </div> <!-- /TYPE PANEL -->
+
+
+        </div>
+
+
+
+
+
+        <div class="col-lg-6">
+
+            <div class="widget widget-gray">
+                <!-- TYPE PANEL -->
+                <div class="widget-head">
+                    <!-- HEAD PANEL -->
+                    <h4 class="heading"><i class="fa fa-pencil-square"></i> Tipo de documento</h4>
+                </div><!-- /HEAD PANEL -->
+
+                <div class="widget-body" id="widget-body2" style="display:none;">
+                    <!-- CONTENT PANEL -->
+
+                    <form action="/Documento/Cadastrar" class="formAjax">
+                        <div class="form-group col-md-12">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" name="nome" placeholder="Nome" required />
+                        </div>
+
+                        <div class="offset-lg-9 col-lg-3 ">
+                            <input type="submit" class="btn btn-primary btn-sm " value="Salvar cadastro" />
+                        </div>
+                    </form>
+
+                    <span class="clear"></span>
+                    <div id="grid"></div>
+
+                </div><!-- /CONTENT PANEL -->
+
+                <div class="widget-footer">
+                    <!-- FOOTER PANEL-->
+                    <a href="#" onclick="toogle(this)" class="fa fa-chevron-up fa-1x"><i></i></a>
+                </div><!-- /FOOTER PANEL-->
+
+            </div> <!-- /TYPE PANEL -->
+
+
+        </div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="Janela" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Painel de confimação</h4>
+            </div>
+            <div class="modal-body text-center">
+                Deseja realmente salvar o cadastro?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" id="botaoSalvar">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Como a navegação recarrega a pagina esse script tem que ser usada em cada view -->
+
+@section Scripts {
+    <script type="text/javascript">
+        $('.nav-pills li:eq(2) a').tab('show');
+    </script>
+}
+
+

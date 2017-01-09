@@ -1,0 +1,12 @@
+C:\Users\bruno.UNIBENJF\Desktop\Sistema\Sistema.Data\bin\Debug\Sistema.Data.dll.config
+C:\Users\bruno.UNIBENJF\Desktop\Sistema\Sistema.Data\bin\Debug\Sistema.Data.dll
+C:\Users\bruno.UNIBENJF\Desktop\Sistema\Sistema.Data\bin\Debug\Sistema.Data.pdb
+C:\Users\bruno.UNIBENJF\Desktop\Sistema\Sistema.Data\bin\Debug\EntityFramework.dll
+C:\Users\bruno.UNIBENJF\Desktop\Sistema\Sistema.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bruno.UNIBENJF\Desktop\Sistema\Sistema.Data\bin\Debug\EntityFramework.xml
+C:\Users\bruno.UNIBENJF\Desktop\Sistema\Sistema.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bruno.UNIBENJF\Desktop\Sistema\Sistema.Data\obj\Debug\Sistema.Data.csprojResolveAssemblyReference.cache
+C:\Users\bruno.UNIBENJF\Desktop\Sistema\Sistema.Data\obj\Debug\Sistema.Data.dll
+C:\Users\bruno.UNIBENJF\Desktop\Sistema\Sistema.Data\obj\Debug\Sistema.Data.pdb
+C:\Users\bruno.UNIBENJF\Desktop\Sistema\Sistema.Data\bin\Debug\Sistema.Domain.dll
+C:\Users\bruno.UNIBENJF\Desktop\Sistema\Sistema.Data\bin\Debug\Sistema.Domain.pdb

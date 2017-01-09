@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniben Administrador de Benefícios</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <img src="~/Content/Images/logo.png" width="120" style="margin:10px;" />
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav  navbar-right" style="margin-top:5px;">
+                    @if (Session["nome"] != null){
+                        <li><a href="#">Bem-vindo  @Session["nome"].ToString()</a></li>
+                    }
+                    <li><a href="/Usuario/Logout"><i class="fa fa-sign-out" ></i>Sair</a></li>
+                </ul>                
+            </div>
+
+        </div>
+    </div>
+
+    <div id="exTab1" class="container" style="margin-top:15px;">
+        <ul class="nav nav-pills">
+            <li>
+                <a href="#1a" data-toggle="tab">Dados cadastrais</a>
+            </li>
+            <li>
+                <a href="#2a" data-toggle="tab">Cadastro de clientes</a>
+            </li>
+            <li>
+                <a href="#4a" data-toggle="tab">Cadastro geral</a>
+            </li>
+        </ul>
+
+        <div class="tab-content clearfix">
+            <div class="tab-pane active" id="1a">
+                <div class="menu_">
+                    <a href="/Home/Index">
+                        <div class="menu_iten">
+                            <i class="fa fa-address-book-o fa-3x" aria-hidden="true"></i>
+                            <span class="texto_icons">Buscar por clientes</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="tab-pane" id="2a">
+                <div class="menu_">
+                    <a href="/Cliente/CadastroCliente">
+                        <div class="menu_iten">
+                            <i class="fa fa-user-o fa-3x" aria-hidden="true"></i>
+                            <span class="texto_icons">cadastrar novo cliente</span>
+                        </div>
+                    </a>
+                    <a href="/Cliente/Anexo">
+                        <div class="menu_iten">
+                            <i class="fa fa-paperclip fa-3x" aria-hidden="true"></i>
+                            <span class="texto_icons">Anexar arquivo</span>
+                        </div>
+                    </a>
+                    <a href="/Cliente/CadastroDependente">
+                        <div class="menu_iten">
+                            <i class="fa fa-group fa-3x" aria-hidden="true"></i>
+                            <span class="texto_icons">vincular beneficiário</span>
+                        </div>
+                    </a>
+                    <a href="/Cliente/CadastroContrato">
+                        <div class="menu_iten">
+                            <i class="fa fa-group fa-3x" aria-hidden="true"></i>
+                            <span class="texto_icons">criar novo contrato</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+            <div class="tab-pane" id="3a">
+
+            </div>
+            <div class="tab-pane" id="4a">
+
+                <div class="menu_">
+                    <a href="/Operadora/CadastroOperadora">
+                        <div class="menu_iten">
+                            <i class="fa fa-building-o fa-3x" aria-hidden="true"></i>
+                            <span class="texto_icons">cadastrar operadora</span>
+                        </div>
+                    </a>
+
+                    <a href="/Instituicao/CadastroInstituicao">
+                        <div class="menu_iten">
+                            <i class="fa fa-building-o fa-3x" aria-hidden="true"></i>
+                            <span class="texto_icons">cadastrar instituição</span>
+                        </div>
+                    </a>
+
+                    <a href="/Empresa/CadastroEmpresa">
+                        <div class="menu_iten">
+                            <i class="fa fa-building-o fa-3x" aria-hidden="true"></i>
+                            <span class="texto_icons">cadastrar empresa</span>
+                        </div>
+                    </a>
+
+                    <a href="/Produto/CadastroProduto">
+                        <div class="menu_iten">
+                            <i class="fa fa-archive fa-3x" aria-hidden="true"></i>
+                            <span class="texto_icons">cadastrar produto</span>
+                        </div>
+                    </a>
+
+                    <a href="/Home/BuscarCadastros">
+                        <div class="menu_iten">
+                            <i class="fa fa-list fa-3x" aria-hidden="true"></i>
+                            <span class="texto_icons">Buscar cadastros</span>
+                        </div>
+                    </a>
+
+                    <a href="/Home/CadastroBasico">
+                        <div class="menu_iten">
+                            <i class="fa fa-stack-overflow fa-3x" aria-hidden="true"></i>
+                            <span class="texto_icons">Cadastro Básico</span>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy;Uniben @DateTime.Now.Year</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/grid")
+    @Scripts.Render("~/bundles/sistema")
+    @Scripts.Render("~/bundles/pagination")
+    @Scripts.Render("~/bundles/jui_filter")
+    @Scripts.Render("~/bundles/mascaras")
+    @Scripts.Render("~/bundles/fileinput")
+    @Scripts.Render("~/bundles/multiselect")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
