@@ -14,383 +14,343 @@
 
 <div class="container" style="margin-top:20px;">
 
-    <div class="row">
-        <div class="widget widget-gray">
-            <!-- TYPE PANEL -->
-            <div class="widget-head">
-                <!-- HEAD PANEL -->
-                <h4 class="heading"><i class="fa fa-archive"></i> Cadastro de contrato</h4>
-            </div><!-- /HEAD PANEL -->
 
-            <div class="widget-body" id="widget-body1">
-                <!-- CONTENT PANEL -->
+    <div class="widget widget-gray">
+        <!-- TYPE PANEL -->
+        <div class="widget-head">
+            <!-- HEAD PANEL -->
+            <h4 class="heading"><i class="fa fa-archive"></i> Cadastro de contrato</h4>
+        </div><!-- /HEAD PANEL -->
 
-                <h4>Dados pessoais</h4>
-                <hr class="style4" />
-
-                <form>
+        <div class="widget-body" id="widget-body1">
+            <!-- CONTENT PANEL -->
 
 
-                    <div class="form-group col-md-6">
-                        <label for="nome">Nome completo</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Nome completo">
-                    </div>
+
+            <form>
+                <div class="row">
+
+                    <h4>Contrato</h4>
+
+                    <hr class="style4" />
 
 
-                    <div class="form-group col-md-6">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Email">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="telefone">Telefone</label>
-                        <input type="text" class="form-control telefone" id="telefone" placeholder="Telefone">
-                    </div>
-
-
-                    <div class="form-group col-md-3">
-                        <label for="telefone">Celular</label>
-                        <input type="text" class="form-control telefone" id="telefone" placeholder="Telefone">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="cpf">CPF</label>
-                        <input type="text" class="form-control cpf" id="cpf" placeholder="CPF">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="rg">RG</label>
-                        <input type="text" class="form-control" id="rg" placeholder="RG">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="civil">Estado civil</label>
-                        <select class="custom-select form-control" id="civil">
-                            <option selected>Escolha uma opção</option>
-                            <option value="1">Solteiro</option>
-                            <option value="2">Casado</option>
-                            <option value="3">Viúvo</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="nascimento">Data de nascimento</label>
-                        <input type="text" class="form-control data" id="nascimento" placeholder="Data de nascimento">
+                    <div class="form-group col-md-10">
+                        <label for="campo_busca">CPF do contratante</label>
+                        <input type="text" class="form-control" id="campo_busca" placeholder="Número do CPF">
                     </div>
 
                     <div class="form-group col-md-2">
-                        <label for="sexo">Sexo</label>
-                        <select class="custom-select form-control decorated " id="sexo">
-                            <option selected>Escolha uma opção</option>
-                            <option value="1">Masculino</option>
-                            <option value="2">Feminino</option>
-                        </select>
+
+                        <button type="button" class="btn btn-primary btn-sm" style="width:100%; font-size:15px; margin-top:25px;">
+                            <i class="fa fa-search" aria-hidden="true"></i> Buscar
+                        </button>
                     </div>
 
-                    <div class="form-group col-md-2">
-                        <label for="naturalidade">Naturalidade</label>
-                        <input type="text" class="form-control" id="naturalidade" placeholder="Naturalidade">
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group col-md-12">
+                        <table class="table" id="tabela_contratante">
+                            <thead>
+                                <tr class="cabecalho_tabela">
+                                    <th>Dados do contratante</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="normal text-center" id="primeiro_contratante">Nenhum contratante selecionado</td>
+                                </tr>
+                                <!--    <tr>
+                                        <td class="normal">
+                                            <div class="form-group col-md-6">
+                                                <label for="nome_contratante">Nome</label>
+                                                <input type="text" class="form-control "  disabled="disabled" id="nome_contratante">
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="cpf_contratante">CPF</label>
+                                                <input type="text" class="form-control"   disabled="disabled" id="cpf_contratante">
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="rg_contratante">RG</label>
+                                                <input type="text" class="form-control"   disabled="disabled" id="rg_contratante">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    -->
+                            </tbody>
+                        </table>
                     </div>
+                </div>
 
-
-                    <div class="form-group col-md-2">
-                        <label for="sus">Cartão SUS</label>
-                        <input type="text" class="form-control" id="sus" placeholder="Cartão SUS">
-                    </div>
-
-                    <div class="form-group col-md-6">
-                        <label for="mae">Nome da mãe</label>
-                        <input type="text" class="form-control" id="mae" placeholder="Nome da mãe">
-                    </div>
-
-                    <div class="form-group col-md-6">
-                        <label for="pai">Nome do pai</label>
-                        <input type="text" class="form-control" id="pai" placeholder="Nome do pai">
-                    </div>
-
-                    <h4>Endereço</h4>
+                <div class="row">
+                    <h4>Anexar Documentos</h4>
                     <hr class="style4">
+                    <div class="form-group col-md-9"></div>
 
                     <div class="form-group col-md-3">
-                        <label for="cep">CEP</label>
-                        <input type="text" class="form-control cep" id="cep" placeholder="CEP">
+                        <button type="button" id="btAdd" class="btn btn-primary btn-sm pull-right " style="margin-left:10px;">
+                            <i class="fa fa-paperclip" aria-hidden="true"></i> Anexar
+                        </button>
                     </div>
-
 
                     <div class="form-group col-md-6">
-                        <label for="rua">Rua</label>
-                        <input type="text" class="form-control" id="rua" placeholder="Rua">
+                        <label for="nome_anexo">Descrição</label>
+                        <input type="text" class="form-control" id="nome_anexo" placeholder="Descrição">
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="numero">Número</label>
-                        <input type="text" class="form-control" id="numero" placeholder="Número">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="complemento">Complemento</label>
-                        <input type="text" class="form-control" id="complemento" placeholder="Complemento">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="bairro">Bairro</label>
-                        <input type="text" class="form-control" id="bairro" placeholder="Bairro">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" class="form-control" id="cidade" placeholder="Cidade">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="estado">Estado</label>
-                        <select class="custom-select form-control decorated " id="estado">
+                        <label for="tipo_documento">Tipo de Documento</label>
+                        <select class="custom-select form-control decorated " id="tipo_documento">
                             <option selected>Escolha uma opção</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="TO">Tocantins</option>
+                            <option value="1">teste</option>
+                            <option value="2">teste</option>
                         </select>
                     </div>
 
+                    <div class="form-group col-md-3">
+                        <label for="anexo">Documento</label>
+                        <input type="file" class="form-control" id="anexo" placeholder="Anexo">
+                    </div>
+                </div>
+                <div class="row">
 
+                    <div class="form-group col-md-12">
+                        <table class="table" id="tabela_anexo">
+                            <thead>
+                                <tr class="cabecalho_tabela">
+                                    <th>Documentos anexados</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="normal text-center" id="primeiro_contratante">Nenhum documento anexado</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="row">
 
                     <h4>Produtos</h4>
                     <hr class="style4">
 
+                    <!--Campo oculto para enviar o id do well para cadastrar o produto  -->
+                    <div class="form-group col-md-9"><input type="hidden" id="inputWell" value="" /></div>
+
+                    <div class="form-group col-md-3">
+                        <button type="button" class="btn btn-primary btn-sm pull-right " onclick="modalProduto('#well1')" style="margin-left:10px;">
+                            <i class="fa fa-plus" aria-hidden="true"></i> Adicionar produto ao contrato
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row">
                     <div class="form-group col-md-12">
-
-
-                        <div class="form-group col-md-6">
-                            <label for="operadora">Operadora</label>
-                            <select class="custom-select form-control decorated " id="operadora">
-                                <option selected>Escolha uma opção</option>
-                                <option value="1">teste</option>
-                                <option value="2">teste</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <label for="instituicao">Instituição</label>
-                            <select class="custom-select form-control decorated " id="instituicao">
-                                <option selected>Escolha uma opção</option>
-                                <option value="1">teste</option>
-                                <option value="2">teste</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <label for="instituicao">Empresa</label>
-                            <select class="custom-select form-control decorated " id="empresa">
-                                <option selected>Escolha uma opção</option>
-                                <option value="1">teste</option>
-                                <option value="2">teste</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <label for="produto">Produtos</label>
-                            <select class="form-control" id="produto">
-                                <option value="1">produto01</option>
-                                <option value="2">produto02</option>
-                                <option value="3">produto03</option>
-                                <option value="4">produto04</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <label for="desconto">Desconto</label>
-                            <input type="number" step="0.01" min="0" class="form-control" id="desconto" placeholder="Desconto">
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <label for="vigencia">Vigência</label>
-                            <input type="date" class="form-control" id="vigencia" placeholder="Vigência">
-                        </div>
-
-                        <div class="form-group col-md-2">
-                            <label for="cobranca">Tipo de Cobrança</label>
-                            <select class="form-control" id="cobranca">
-                                <option value="1">a</option>
-                                <option value="2">b</option>
-                                <option value="3">c</option>
-                                <option value="4">d</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-1">
-                            <label for="btAdd">Adicionar</label>
-                            <button type="button" id="btAdd" class="btn btn-primary btn-sm " style="margin-left:10px;">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                            </button>
-                        </div>
-
-                        <div class="form-group col-md-3 " style="margin-top:25px;">
-                            <input type="checkbox" name="excecao" id="excecao" autocomplete="off" />
-                            <div class="btn-group">
-                                <label for="isento" class="btn btn-default">
-                                    <span class="glyphicon glyphicon-ok"></span>
-                                    <span> </span>
-                                </label>
-                                <label for="excecao" class="btn btn-default active">
-                                    Produto com Exceção
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <label for="carencia">Carência</label>
-                            <select class="form-control" id="carencia" name="carencia">
-                                <option value="1">a</option>
-                                <option value="2">b</option>
-                                <option value="3">c</option>
-                                <option value="4">d</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-5">
-                            <label for="cobranca">Tipo de Exceção</label>
-                            <select class="form-control" id="tipo_excecao[]" name="tipo_excecao[]">
-                                <option value="1">a</option>
-                                <option value="2">b</option>
-                                <option value="3">c</option>
-                                <option value="4">d</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-1" style="margin-top:28px;">
-                            <button type="button" id="btAddExc" class="btn btn-default btn-sm " style="margin-left:10px;">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                            </button>
-                        </div>
-
-                        <div id="divExc" class="col-md-9 col-lg-offset-3">
-                            <!---div inputs excecao-->
-                        </div>
-
-
-                    </div>
-
-
-                    <hr class="style4">
-                    <div class="form-group col-md-12">
-                        <div class="well" id="well">
+                        <div class="well" id="well1">
 
                         </div>
                     </div>
 
-                    <h4>Financeiro</h4>
+                </div>
+
+
+                <div class="row">
+                    <h4>Beneficiário</h4>
                     <hr class="style4">
 
-                    <div class="form-group col-md-3">
-                        <label for="pagamento">Modo de pagamento</label>
-                        <select class="custom-select form-control decorated " id="pagamento">
-                            <option selected>Escolha uma opção</option>
-                            <option value="1">Cartão de crédito</option>
-                            <option value="2">Boleto bancário</option>
-                        </select>
-                    </div>
+                    <div class="form-group col-md-9"></div>
 
-                    <div class="form-group col-md-3">
-                        <label for="banco">Banco</label>
-                        <select class="custom-select form-control decorated " id="banco">
-                            <option selected>Escolha uma opção</option>
-                            <option value="1">BB</option>
-                            <option value="2">Itau</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="agencia">Agência</label>
-                        <input type="text" class="form-control" id="agencia" placeholder="Agência">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="conto">Conta corrente</label>
-                        <input type="text" class="form-control" id="conta" placeholder="Conta corrente">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="dataVencimento">Data de Vencimento</label>
-                        <input type="date" class="form-control" id="dataVencimento" placeholder="">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="alterarDataVencimento">Alterar Data de Vencimento</label>
-                        <input type="date" class="form-control" id="alterarDataVencimento" placeholder="">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="periodicidade">Periodicidade taxa extra</label>
-                        <select class="form-control" id="periodicidade">
-                            <option value="-1">Selecione uma opção</option>
-                            <option value="mensal">Mensal</option>
-                            <option value="anual">Anual</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3 ">
-                        <label for="taxa">Taxa extra</label>
-                        <input type="number" step="0.01" min="0" class="form-control" id="taxa" placeholder="Taxa extra">
-                    </div>
-
-                    <div class="form-group col-md-12 ">
-                        <label for="taxa_descricao">Descrição da taxa extra</label>
-                        <input type="number" class="form-control" id="taxa_descricao" placeholder="Descrição da taxa extra">
-                    </div>
-
-
-                    <hr class="style4">
-
-                    <div class="form-group col-md-12">
-                        <label for="obs">Observação </label>
-                        <textarea class="form-control" rows="5" id="obs"></textarea>
-                    </div>
-
-
-                    <hr class="style4">
-
-                    <div class="col-md-3 offset-md-6">
-                        <button type="button" class="btn btn-primary btn-sm " data-toggle="modal" data-target="#modal">
-                            Salvar cadastro
+                    <div class="form-group col-md-3 text-center ">
+                        <button type="button" id="btAddBene" class="btn btn-primary btn-sm pull-right " style="margin-left:10px;">
+                            <i class="fa fa-plus" aria-hidden="true"></i> Adicionar um novo beneficiário
                         </button>
                     </div>
 
-                </form>
+                    <div class="form-group col-md-5">
+                        <label for="nome_beneficiario">*Nome completo</label>
+                        <input type="text" class="form-control" id="nome_beneficiario" placeholder="Nome completo">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <button type="button"  class="btn btn-primary" style="margin-top:25px; margin-left:-25px;">
+                            <i class="fa fa-search" aria-hidden="true"></i> Buscar
+                        </button>
+                    </div>
 
-                <span class="clear"></span>
 
-            </div><!-- /CONTENT PANEL -->
+                    <div class="form-group col-md-6">
+                        <label for="email_beneficiario">Email</label>
+                        <input type="email" class="form-control" id="email_beneficiario" placeholder="Email">
+                    </div>
 
-            <div class="widget-footer">
-                <!-- FOOTER PANEL-->
-                <a href="#" id="toggle1" class="fa fa-chevron-up fa-1x" title=""><i></i></a>
-            </div><!-- /FOOTER PANEL-->
+                    <div class="form-group col-md-3">
+                        <label for="telefone_beneficiario">Telefone</label>
+                        <input type="text" class="form-control telefone" id="telefone_beneficiario" placeholder="Telefone">
+                    </div>
 
-        </div> <!-- /TYPE PANEL -->
+                    <div class="form-group col-md-3">
+                        <label for="cpf_beneficiario">CPF</label>
+                        <input type="text" class="form-control cpf" id="cpf_beneficiario" placeholder="CPF">
+                    </div>
 
-    </div>
+                    <div class="form-group col-md-3">
+                        <label for="rg_beneficiario">RG</label>
+                        <input type="text" class="form-control" id="rg_beneficiario" placeholder="RG">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="civil_beneficiario">Estado civil</label>
+                        <select class="custom-select form-control" id="civil_beneficiario">
+                            <option selected>Escolha uma opção</option>
+                            <option value="Solteiro">Solteiro</option>
+                            <option value="Casado">Casado</option>
+                            <option value="Viúvo">Viúvo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="nascimento_beneficiario">Data de nascimento</label>
+                        <input type="text" class="form-control data" id="nascimento_beneficiario" placeholder="Data de nascimento">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="sexo_beneficiario">Sexo</label>
+                        <select class="custom-select form-control decorated " id="sexo_beneficiario">
+                            <option selected>Escolha uma opção</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="naturalidade_beneficiario">Naturalidade</label>
+                        <input type="text" class="form-control" id="naturalidade_beneficiario" placeholder="Naturalidade">
+                    </div>
+
+
+                    <div class="form-group col-md-3">
+                        <label for="sus_beneficiario">Cartão SUS</label>
+                        <input type="text" class="form-control" id="sus_beneficiario" placeholder="Cartão SUS">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="mae_beneficiario">Nome da mãe</label>
+                        <input type="text" class="form-control" id="mae_beneficiario" placeholder="Nome da mãe">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="pai_beneficiario">Nome do pai</label>
+                        <input type="text" class="form-control" id="pai_beneficiario" placeholder="Nome do pai">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="parentesco_beneficiario">Parentesco</label>
+                        <select class="custom-select form-control decorated " id="parentesco_beneficiario">
+                            <option selected>Escolha uma opção</option>
+                            <option value="filho">Filho</option>
+                            <option value="irma">Irmã</option>
+                            <option value="companheiro">Companheiro</option>
+                            <option value="enteado">Enteado</option>
+                            <option value="esposo">Esposo</option>
+                            <option value="cunhado">Cunhado</option>
+                            <option value="genro">Genro</option>
+                            <option value="madastra">Madastra</option>
+                            <option value="mae">Mãe</option>
+                            <option value="nora">Nora</option>
+                            <option value="neto">Neto</option>
+                            <option value="padastro">Padastro</option>
+                            <option value="Tio">Tio</option>
+                            <option value="pai">Pai</option>
+                            <option value="primo">Primo</option>
+                            <option value="sobrinho">Sobrinho</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-4 " style="margin-top:25px;">
+                        <input type="checkbox" name="Isento de mensalidade" id="isento_beneficiario" autocomplete="off" />
+                        <div class="btn-group">
+                            <label for="isento_beneficiario" class="btn btn-default">
+                                <span class="glyphicon glyphicon-ok"></span>
+                                <span> </span>
+                            </label>
+                            <label for="isento_beneficiario" class="btn btn-default active">
+                                Isento de mensalidade
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-3 col-md-offset-2"  style="margin-top:25px;">
+                        <button type="button" class="btn btn-primary btn-sm pull-right " onclick="modalProduto('#well2')" style="margin-left:10px;">
+                            <i class="fa fa-plus" aria-hidden="true"></i> Adicionar produto específico ao beneficiário
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <div class="well" id="well2">
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <table class="table" id="tabela_beneficiario">
+                            <thead>
+                                <tr class="cabecalho_tabela">
+                                    <th width="90%">Dados do beneficiário</th>
+                                    <th width="5%" align="center"></th>
+                                    <th width="5%" align="center"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" class="normal text-center" id="primeiro">Nenhum beneficiário cadastrado</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <hr class="style4">
+                    <div class="form-group col-md-12">
+                        <label for="obs">Observação do contrato</label>
+                        <textarea class="form-control" rows="5" id="obs"></textarea>
+                    </div>
+
+                    <div class="col-md-9"></div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#modal">
+                            <i class="fa fa-floppy-o" aria-hidden="true"></i>  Salvar cadastro
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+            <span class="clear"></span>
+
+        </div><!-- /CONTENT PANEL -->
+
+        <div class="widget-footer">
+            <!-- FOOTER PANEL-->
+            <a href="#" id="toggle1" class="fa fa-chevron-up fa-1x" title=""><i></i></a>
+        </div><!-- /FOOTER PANEL-->
+
+    </div> <!-- /TYPE PANEL -->
+
 </div>
+
 
 
 <!-- Modal -->
@@ -416,6 +376,8 @@
 
 
 
+
+
 <!-- Modal Produtos detalhe-->
 <div class="modal fade" id="modalProdutoDetalhe" tabindex="-1" role="dialog" aria-labelledby="Janela" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -436,64 +398,314 @@
     </div>
 </div>
 
+
+
+<!-- Modal Produtos-->
+<div class="modal fade" id="modalProdutos" tabindex="-1" role="dialog" aria-labelledby="Janela" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Adicionar produtos</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+
+
+                    <div class="form-group col-md-12">
+
+                        <div class="form-group col-md-3">
+                            <label for="operadora">Operadora</label>
+                            <select class="custom-select form-control decorated " id="operadora">
+                                <option selected>Escolha uma opção</option>
+                                <option value="1">teste</option>
+                                <option value="2">teste</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="carencia">Carência</label>
+                            <select class="form-control" id="carencia" name="carencia">
+                                <option value="1">a</option>
+                                <option value="2">b</option>
+                                <option value="3">c</option>
+                                <option value="4">d</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="instituicao">Instituição</label>
+                            <select class="custom-select form-control decorated " id="instituicao">
+                                <option selected>Escolha uma opção</option>
+                                <option value="1">teste</option>
+                                <option value="2">teste</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="instituicao">Empresa</label>
+                            <select class="custom-select form-control decorated " id="empresa">
+                                <option selected>Escolha uma opção</option>
+                                <option value="1">teste</option>
+                                <option value="2">teste</option>
+                            </select>
+                        </div>
+
+
+
+                        <div class="form-group col-md-6">
+                            <label for="produto">Produtos</label>
+                            <select class="form-control" id="produto">
+                                <option value="1">produto01</option>
+                                <option value="2">produto02</option>
+                                <option value="3">produto03</option>
+                                <option value="4">produto04</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3 ">
+                            <label for="data_vencimento">Data de vencimento</label>
+                            <input type="date" class="form-control" id="data_vencimento" placeholder="Data de vencimento">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="vigencia">Data de Vigência</label>
+                            <input type="date" class="form-control" id="vigencia" placeholder="Data de Vigência">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="taxa_extra">Taxa Associativa</label>
+                            <input type="number" min="0" class="form-control" id="taxa_extra" placeholder="Taxa extra">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="periodicidade">Periodicidade taxa extra</label>
+                            <select class="form-control" id="periodicidade">
+                                <option value="-1">Selecione uma opção</option>
+                                <option value="mensal">Mensal</option>
+                                <option value="anual">Anual</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="desconto">Desconto</label>
+                            <input type="number" step="0.01" min="0" class="form-control" id="desconto" placeholder="Desconto">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="cobranca">Modo de Cobrança</label>
+                            <select class="form-control" id="cobranca">
+                                <option value="1">a</option>
+                                <option value="2">b</option>
+                                <option value="3">c</option>
+                                <option value="4">d</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group col-md-11">
+                            <label for="cobranca">Tipo de Exceção</label>
+                            <select class="form-control" id="tipo_excecao[]" name="tipo_excecao[]">
+                                <option value="1">a</option>
+                                <option value="2">b</option>
+                                <option value="3">c</option>
+                                <option value="4">d</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-1" style="margin-top:28px;">
+                            <button type="button" id="btAddExc" class="btn btn-default btn-sm " style="margin-left:10px;">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div id="divExc" class="col-md-12">
+                            <!---div inputs excecao-->
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" id="btAddProduto">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Como a navegação recarrega a pagina esse script tem que ser usada em cada view -->
 @section Scripts {
     <script type="text/javascript">
 
+        //funcao para abriar os alerts
+        function alerta(acao, msg) {
 
-        $('#cep').keyup(function () {
+            var erro = '<div class="alert alert-danger alert-dismissable fade in" role="alert"> <strong>Error</strong><p>' + msg + '</p></div>';
+            var sucesso = '<div class="alert alert-success alert-dismissable fade in" role="alert"> <strong>Sucesso</strong><p>' + msg + '</p></div>';
+            var atencao = '<div class="alert alert-warning alert-dismissable fade in" role="alert">  <strong>Atenção</strong><p>' + msg + '</p></div>';
 
-            var cep = $(this).val().replace(/[^a-z0-9]/gmi, "");
-
-            if (cep.length == 8) {
-                $.ajax({
-                    method: "GET",
-                    url: "/Cliente/RetornaCep/" + cep,
-                    success: function (r) {
-                        var retorno = JSON.parse(r);
-                        $("#rua").val(retorno.logradouro);
-                        $("#bairro").val(retorno.bairro);
-                        $("#cidade").val(retorno.localidade);
-                        $("#estado").val(retorno.uf);
-                        $("#complemento").val(retorno.complemento);
-
-                    }
-                });
+            switch (acao) {
+                case 'erro':
+                    acao = erro;
+                    break;
+                case 'sucesso':
+                    acao = sucesso;
+                    break;
+                case 'atencao':
+                    acao = atencao;
+                    break;
             }
 
-        });
+            var pgt = window.scrollY;
+            var vph = $(window).height();
+            var top = pgt + vph / 2.5;
+
+            $("#alert").each(function () {
+                $(this).remove();
+            });
+
+            $('body').append('<div id="alert"><div class="col-md-12">' + acao + ' </div><div  class="col-md-12"> <button type="button" class="btn btn-secondary pull-right" onclick="$(this).parent().parent().fadeOut();" >Fechar</button></div></div>');
+
+            $("#alert").css('top', top);
+
+        }
+
 
 
         $('.nav-pills li:eq(1) a').tab('show');
         $(".data").mask("99/99/9999", { placeholder: "dd/mm/yyyy" });
         $(".telefone").mask("(999) 9999-9999");
         $(".cpf").mask("999.999.999-99");
-        $(".cep").mask("99999-999");
 
+
+        $("#btAddBene").on("click", function () {
+
+            var nome_beneficiario = $("#nome_beneficiario").val();
+            var email_beneficiario = $("#email_beneficiario").val();
+            var cpf_beneficiario = $("#cpf_beneficiario").val();
+            var rg_beneficiario = $("#rg_beneficiario").val();
+            var telefone_beneficiario = $("#telefone_beneficiario").val();
+            var sexo_beneficiario = $("#sexo_beneficiario").val();
+            var naturalidade_beneficiario = $("#naturalidade_beneficiario").val();
+            var sus_beneficiario = $("#sus").val();
+            var mae_beneficiario = $("#mae_beneficiario").val();
+            var pai_beneficiario = $("#pai_beneficiario").val();
+            var parentesco_beneficiario = $("#parentesco_beneficiario").val();
+            var isento_beneficiario = $("#isento_beneficiario").val();
+            var nascimento_beneficiario = $("#nascimento_beneficiario").val();
+            var estado_civil = $("#civil_beneficiario").val();
+
+            var produto = $("#well2 .btn-primary").html();
+
+            if (isento_beneficiario == "on") {
+                isento_beneficiario = "Isento"
+            } else {
+                isento_beneficiario = "Não isento"
+            }
+
+
+            if (nome_beneficiario != "" && email_beneficiario != "" && cpf_beneficiario != "" && rg_beneficiario != "") {
+
+                if ($("#primeiro").length = 1) { $("#primeiro").remove(); }
+
+                var status = $("#tabela_beneficiario tbody tr").length;
+
+                var id = Math.floor(Math.random() * 1000);
+
+                if ((status % 2) == 0) {
+                    status = "ativo";
+                } else {
+                    status = "normal";
+                }
+
+                var html = '';
+                html += ' <tr>';
+                html += '    <td class="' + status + '">';
+                html += '        <span><b>Beneficiário:</b>' + nome_beneficiario + '</span>';
+                html += '        <div id="janela_' + id + '" class="collapse" style="margin-top:20px;">';
+                html += '            <ul class="list-group">';
+                html += '                <li class="list-group-item"><b>Nome:</b> ' + nome_beneficiario + '</li>';
+                html += '                <li class="list-group-item"><b>Email:</b> ' + email_beneficiario + '></li>';
+                html += '                <li class="list-group-item"><b>Telefone:</b> ' + telefone_beneficiario + '</li>';
+                html += '               <li class="list-group-item"><b>CPF:</b> ' + cpf_beneficiario + '</li>';
+                html += '               <li class="list-group-item"><b>RG:</b> ' + rg_beneficiario + '</li>';
+                html += '                <li class="list-group-item"><b>Estado civil:</b> ' + estado_civil + '</li>';
+                html += '                <li class="list-group-item"><b>Data de nascimento:</b> ' + nascimento_beneficiario + '</li>';
+                html += '                <li class="list-group-item"><b>Sexo:</b> ' + sexo_beneficiario + '</li>';
+                html += '                <li class="list-group-item"><b>Naturalidade:</b> ' + naturalidade_beneficiario + '</li>';
+                html += '                <li class="list-group-item"><b>Cartão SUS:</b> ' + sus_beneficiario + '</li>';
+                html += '               <li class="list-group-item"><b>Nome da mãe:</b> ' + mae_beneficiario + '</li>';
+                html += '               <li class="list-group-item"><b>Nome do pai:</b> ' + pai_beneficiario + '</li>';
+                html += '               <li class="list-group-item"><b>Parentesco:</b> ' + parentesco_beneficiario + '</li>';
+                html += '                <li class="list-group-item"><b>Isento de mensalidade:</b> ' + isento_beneficiario + '</li>';
+                html += '                <li class="list-group-item"><b>Produto:</b>' + produto + '</li>';
+                html += '            </ul>';
+                html += '        </div>';
+                html += '     </td>';
+                html += '    <td align="center" style="vertical-align:top;" class="' + status + '">';
+                html += '        <button onclick="return false;"  data-target="#janela_' + id + '" class="btn btn-primary btn-sm" data-toggle="collapse"><i class="fa fa-expand" aria-hidden="true"></i> Exibir Detalhes</a>';
+                html += '    </td>';
+                html += '    <td style="vertical-align:top;" align="center" class="' + status + '">';
+                html += '        <button type="button" onclick="excluirRow(this)" class="btn btn-primary btn-sm ">';
+                html += '            <i class="fa fa-trash-o" aria-hidden="true"></i>';
+                html += '        </button>';
+                html += '    </td>';
+                html += ' </tr>';
+
+
+
+                $("#tabela_beneficiario tbody").append(html);
+            }
+
+
+        });
+
+        function excluirRow(elemento) {
+            $(elemento).closest("tr").remove();
+        }
 
 
         $("#btAddExc").on("click", function () {
             var el = $('select[id^="tipo_excecao"]:first').clone();
             var id = Math.floor((Math.random() * 1000) + 1);
             el.attr('id', 'exc_' + id);
-            var botao = '<div class="form-group col-md-1 pull-right" style="margin-right:4px;" ><button type="button" style="float:right;" onclick="excluirExcecao(' + 'exc_' + id + ', this)" class="btn btn-default btn-sm "><i class="fa fa-minus" aria-hidden="true"></i></button></div>';
-
-            el.css({ "margin-bottom": "15px", "width": "88.6%" }).addClass("col-md-8").prependTo("#divExc");
+            var botao = '<div class="form-group col-md-1 pull-right" style="margin-right:-12px;"><button type="button" style="float:right;" onclick="excluirExcecao(' + 'exc_' + id + ', this)" class="btn btn-default btn-sm "><i class="fa fa-minus" aria-hidden="true"></i></button></div>';
+            el.css({ "margin-bottom": "15px", "width": "91.66%" }).addClass("col-md-11").prependTo("#divExc");
             $(botao).insertAfter(el);
         });
 
 
 
-        $("#btAdd").on("click", function () {
+        function modalProduto(well) {
+            $("#modalProdutos").modal();
+            $("#inputWell").val(well);
+        }
 
+
+
+        $("#btAddProduto").on("click", function () {
+
+            var well = $("#inputWell").val();
             var array = [];
 
+
             $('select[name^="tipo_excecao"]').each(function () {
-                $(this);
-                var obj = { "id": $(this).val(), "excecao": $(this).context.selectedOptions[0].innerText };
-                array.push(obj);
+                if ($(this) !== undefined) {
+                    var obj = { "id": $(this).val(), "excecao": $(this).context.selectedOptions[0].innerText };
+                    array.push(obj);
+                }
+
             });
 
+            var produto = $("#produto").val();
+            var operadora = $("#operadora").val();
+            var empresa = $("#empresa").val();
+            var instituicao = $("#instituicao").val();
             var produto = $("#produto").val();
             var nomeproduto = $("#produto option:selected").text();
             var desconto = $("#desconto").val();
@@ -503,31 +715,56 @@
             var carencia = $("#carencia").val();
             var carencianome = $("#carencia  option:selected").text();
             var excecao = $("#excecao").val();
-
-
+            var nomeoperadora = $("#operadora option:selected").text();
+            var nomeempresa = $("#empresa option:selected").text();
+            var nomeinstituicao = $("#instituicao option:selected").text();
             var produto_text = $("#produto option:selected").text();
 
 
-            var jsonObj = { 'excecao': excecao, 'carencia': carencia, 'carencianome': carencianome, 'nome': nomeproduto, 'produto': produto, 'nomecobranca': nomecobranca, 'desconto': desconto, 'vigencia': vigencia, 'cobranca': cobranca, 'array': array };
-
+            var jsonObj = {
+                'nomeoperadora': nomeoperadora,
+                'nomeempresa': nomeempresa,
+                'nomeinstituicao': nomeinstituicao,
+                'excecao': excecao,
+                'excecao': excecao,
+                'carencia': carencia,
+                'carencianome': carencianome,
+                'nome': nomeproduto,
+                'produto': produto,
+                'nomecobranca': nomecobranca,
+                'desconto': desconto,
+                'vigencia': vigencia,
+                'cobranca': cobranca,
+                'array': array
+            };
 
             var botao = ' <div class="btn-group">'
-                                + '<button type="button" onclick="return false;" class="btn btn-mini">' + produto_text + '</button>'
+                                + '<button type="button" onclick="return false;" class="btn btn-mini btn-primary">' + produto_text + '</button>'
                                 + '<button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">'
                                 + '<span class="caret"></span>'
                                 + '</button>'
                                 + '<ul class="dropdown-menu">'
-                                + '<li><a href="javascript:void(0)" onclick=\'modalDetalhes(' + JSON.stringify(jsonObj) + ')\' >Detalhes</a></li>'
-                                + '<li><a href="javascript:void(0)" onclick="excluirProduto(this)" rel=\'' + JSON.stringify(jsonObj) + '\'>Excluir</a></li>'
+                                + '<li><a href="javascript:void(0)" onclick=\'modalDetalhes(' + JSON.stringify(jsonObj) + ')\' ><i class="fa fa-search" aria-hidden="true"></i> Detalhes</a></li>'
+                                + '<li><a href="javascript:void(0)" onclick=\'modalEditar(' + JSON.stringify(jsonObj) + ')\' ><i class="fa fa-edit" aria-hidden="true"></i> Editar</a></li>'
+                                + '<li><a href="javascript:void(0)" onclick="excluirProduto(this)" rel=\'' + JSON.stringify(jsonObj) + '\'> <i class="fa fa-trash" aria-hidden="true"></i> Excluir</a></li>'
                                 + '</ul>'
                         + '</div> ';
 
 
             if (produto != "" && vigencia != "" && cobranca != "") {
-                $(".well").append(botao);
+                $(well).append(botao);
+                $("#modalProdutos input, select").val([]);
+                $("#divExc").html("");
+                alerta('sucesso', 'Produto adicionado ao contrato com sucesso.');
             }
 
+
         });
+
+
+        function modalEditar(obj) {
+               $("#modalProdutos").modal();
+        }
 
 
         function modalDetalhes(obj) {
@@ -548,6 +785,9 @@
             html += "<li class='list-group-item'>Desconto:" + (obj.desconto != "" ? obj.desconto : "Nenhum") + "</li>";
             html += "<li class='list-group-item'>Vigência:" + dataformatada.toLocaleString("pt-BR", { year: 'numeric', month: 'numeric', day: 'numeric' }) + "</li>";
             html += "<li class='list-group-item'>Carência:" + obj.carencianome + "</li>";
+            html += "<li class='list-group-item'>Operadora:" + obj.nomeoperadora + "</li>";
+            html += "<li class='list-group-item'>Instituição:" + obj.nomeinstituicao + "</li>";
+            html += "<li class='list-group-item'>Empresa:" + obj.nomeempresa + "</li>";
             html += "<li class='list-group-item'>Tipo de Cobrança:" + obj.nomecobranca + "</li>";
             html += exc;
             html += "</ul>";

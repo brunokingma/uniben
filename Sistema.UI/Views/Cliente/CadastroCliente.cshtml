@@ -14,7 +14,8 @@
 
 <div class="container" style="margin-top:20px;">
 
-    <div class="row">
+    <form>
+
         <div class="widget widget-gray">
             <!-- TYPE PANEL -->
             <div class="widget-head">
@@ -25,14 +26,16 @@
             <div class="widget-body" id="widget-body1">
                 <!-- CONTENT PANEL -->
 
-                <h4>Dados pessoais</h4>
-                <hr class="style4" />
+                <div class="row">
+                    <h4>Dados pessoais <small style="color:#6c0505; font-size:10px;">*Campos obrigátorios</small></h4>
 
-                <form>
+                    <hr class="style4" />
+
+
 
 
                     <div class="form-group col-md-6">
-                        <label for="nome">Nome completo</label>
+                        <label for="nome">*Nome completo</label>
                         <input type="text" class="form-control" id="nome" placeholder="Nome completo">
                     </div>
 
@@ -54,17 +57,17 @@
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="cpf">CPF</label>
+                        <label for="cpf">*CPF</label>
                         <input type="text" class="form-control cpf" id="cpf" placeholder="CPF">
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="rg">RG</label>
+                        <label for="rg">*RG</label>
                         <input type="text" class="form-control" id="rg" placeholder="RG">
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="civil">Estado civil</label>
+                        <label for="civil">*Estado civil</label>
                         <select class="custom-select form-control" id="civil">
                             <option selected>Escolha uma opção</option>
                             <option value="1">Solteiro</option>
@@ -74,12 +77,12 @@
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="nascimento">Data de nascimento</label>
+                        <label for="nascimento">*Data de nascimento</label>
                         <input type="text" class="form-control data" id="nascimento" placeholder="Data de nascimento">
                     </div>
 
                     <div class="form-group col-md-2">
-                        <label for="sexo">Sexo</label>
+                        <label for="sexo">*Sexo</label>
                         <select class="custom-select form-control decorated " id="sexo">
                             <option selected>Escolha uma opção</option>
                             <option value="1">Masculino</option>
@@ -88,7 +91,7 @@
                     </div>
 
                     <div class="form-group col-md-2">
-                        <label for="naturalidade">Naturalidade</label>
+                        <label for="naturalidade">*Naturalidade</label>
                         <input type="text" class="form-control" id="naturalidade" placeholder="Naturalidade">
                     </div>
 
@@ -99,19 +102,55 @@
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="mae">Nome da mãe</label>
+                        <label for="mae">*Nome da mãe</label>
                         <input type="text" class="form-control" id="mae" placeholder="Nome da mãe">
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="pai">Nome do pai</label>
+                        <label for="pai">*Nome do pai</label>
                         <input type="text" class="form-control" id="pai" placeholder="Nome do pai">
                     </div>
+
+                </div>
+
+                <div class="row">
+                    <h4>Dados Financeiros</h4>
+                    <hr class="style4">
+
+                    <div class="form-group col-md-6">
+                        <label for="banco">Banco</label>
+                        <select class="custom-select form-control decorated " id="banco">
+                            <option selected>Escolha uma opção</option>
+                            <option value="1">BB</option>
+                            <option value="2">Itau</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="agencia">Agência</label>
+                        <input type="text" class="form-control" id="agencia" placeholder="Agência">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="conto">Conta corrente</label>
+                        <input type="text" class="form-control" id="conta" placeholder="Conta corrente">
+                    </div> 
+
+                </div>
+
+                <div class="row">
 
                     <h4>Endereço</h4>
                     <hr class="style4">
 
-                   
+                    <div class="form-group col-md-9"></div>
+
+                    <div class="form-group col-md-3 text-center ">
+                        <button type="button" id="btAddEnd" class="btn btn-primary btn-sm " style="margin-left:10px;">
+                            <i class="fa fa-plus" aria-hidden="true"></i> Adicionar um novo endereço
+                        </button>
+                    </div>
+
 
                     <div class="form-group col-md-3">
                         <label for="cep">CEP</label>
@@ -119,17 +158,18 @@
                     </div>
 
 
-                    <div class="form-group col-md-4">
-                        <label for="rua">Rua</label>
+                    <div class="form-group col-md-3">
+                        <label for="rua">*Rua</label>
                         <input type="text" class="form-control" id="rua" placeholder="Rua">
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="numero">Número</label>
+                        <label for="numero">*Número</label>
                         <input type="text" class="form-control" id="numero" placeholder="Número">
                     </div>
+
                     <div class="form-group col-md-3">
-                        <label for="tipo">Tipo de endereço</label>
+                        <label for="tipo">*Tipo de endereço</label>
                         <select class="custom-select form-control decorated " id="tipo">
                             <option selected>Escolha uma opção</option>
                             <option value="cobranca">Cobrança</option>
@@ -142,15 +182,15 @@
                         <input type="text" class="form-control" id="complemento" placeholder="Complemento">
                     </div>
                     <div class="form-group col-md-3">
-                        <label for="bairro">Bairro</label>
+                        <label for="bairro">*Bairro</label>
                         <input type="text" class="form-control" id="bairro" placeholder="Bairro">
                     </div>
                     <div class="form-group col-md-3">
-                        <label for="cidade">Cidade</label>
+                        <label for="cidade">*Cidade</label>
                         <input type="text" class="form-control" id="cidade" placeholder="Cidade">
                     </div>
                     <div class="form-group col-md-3">
-                        <label for="estado">Estado</label>
+                        <label for="estado">*Estado</label>
                         <select class="custom-select form-control decorated " id="estado">
                             <option selected>Escolha uma opção</option>
                             <option value="AC">Acre</option>
@@ -182,218 +222,54 @@
                             <option value="TO">Tocantins</option>
                         </select>
                     </div>
+                </div>
 
-
+                <div class="row">
                     <div class="form-group col-md-12">
-
-
+                        <table class="table" id="tabela_endereco">
+                            <thead>
+                                <tr class="cabecalho_tabela">
+                                    <th>CEP</th>
+                                    <th>Rua</th>
+                                    <th>Número</th>
+                                    <th>Tipo de Endereço</th>
+                                    <th>Complemento</th>
+                                    <th>Bairro</th>
+                                    <th>Cidade</th>
+                                    <th>Estado</th>
+                                    <th>Excluir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="primeiro">
+                                    <td colspan="9" align="center" class="normal">Nenhum endereço cadastrado</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
+                </div>
+            <div class="row">
 
-                    <h4>Produtos</h4>
-                    <hr class="style4">
+                <hr class="style4">
 
-                    <div class="form-group col-md-12">
-
-
-                        <div class="form-group col-md-6">
-                            <label for="operadora">Operadora</label>
-                            <select class="custom-select form-control decorated " id="operadora">
-                                <option selected>Escolha uma opção</option>
-                                <option value="1">teste</option>
-                                <option value="2">teste</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <label for="instituicao">Instituição</label>
-                            <select class="custom-select form-control decorated " id="instituicao">
-                                <option selected>Escolha uma opção</option>
-                                <option value="1">teste</option>
-                                <option value="2">teste</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <label for="instituicao">Empresa</label>
-                            <select class="custom-select form-control decorated " id="empresa">
-                                <option selected>Escolha uma opção</option>
-                                <option value="1">teste</option>
-                                <option value="2">teste</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <label for="produto">Produtos</label>
-                            <select class="form-control" id="produto">
-                                <option value="1">produto01</option>
-                                <option value="2">produto02</option>
-                                <option value="3">produto03</option>
-                                <option value="4">produto04</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <label for="desconto">Desconto</label>
-                            <input type="number" step="0.01" min="0" class="form-control" id="desconto" placeholder="Desconto">
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <label for="vigencia">Vigência</label>
-                            <input type="date" class="form-control" id="vigencia" placeholder="Vigência">
-                        </div>
-
-                        <div class="form-group col-md-2">
-                            <label for="cobranca">Tipo de Cobrança</label>
-                            <select class="form-control" id="cobranca">
-                                <option value="1">a</option>
-                                <option value="2">b</option>
-                                <option value="3">c</option>
-                                <option value="4">d</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-1">
-                            <label for="btAdd">Adicionar</label>
-                            <button type="button" id="btAdd" class="btn btn-primary btn-sm " style="margin-left:10px;">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                            </button>
-                        </div>
-
-                        <div class="form-group col-md-3 " style="margin-top:25px;">
-                            <input type="checkbox" name="excecao" id="excecao" autocomplete="off" />
-                            <div class="btn-group">
-                                <label for="isento" class="btn btn-default">
-                                    <span class="glyphicon glyphicon-ok"></span>
-                                    <span> </span>
-                                </label>
-                                <label for="excecao" class="btn btn-default active">
-                                    Produto com Exceção
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <label for="carencia">Carência</label>
-                            <select class="form-control" id="carencia" name="carencia">
-                                <option value="1">a</option>
-                                <option value="2">b</option>
-                                <option value="3">c</option>
-                                <option value="4">d</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-5">
-                            <label for="cobranca">Tipo de Exceção</label>
-                            <select class="form-control" id="tipo_excecao[]" name="tipo_excecao[]">
-                                <option value="1">a</option>
-                                <option value="2">b</option>
-                                <option value="3">c</option>
-                                <option value="4">d</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-1" style="margin-top:28px;">
-                            <button type="button" id="btAddExc" class="btn btn-default btn-sm " style="margin-left:10px;">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                            </button>
-                        </div>
-
-                        <div id="divExc" class="col-md-9 col-lg-offset-3">
-                            <!---div inputs excecao-->
-                        </div>
+                <div class="form-group col-md-12">
+                    <label for="obs">Observação </label>
+                    <textarea class="form-control" rows="5" id="obs"></textarea>
+                </div>
 
 
-                    </div>
+                <hr class="style4">
+
+                <div class="col-md-3 offset-md-6">
+                    <button type="button" class="btn btn-primary btn-sm " data-toggle="modal" data-target="#modal">
+                        Salvar cadastro
+                    </button>
+                </div>
+            </div>
 
 
-                    <hr class="style4">
-                    <div class="form-group col-md-12">
-                        <div class="well" id="well">
 
-                        </div>
-                    </div>
-
-                    <h4>Financeiro</h4>
-                    <hr class="style4">
-
-                    <div class="form-group col-md-3">
-                        <label for="pagamento">Modo de pagamento</label>
-                        <select class="custom-select form-control decorated " id="pagamento">
-                            <option selected>Escolha uma opção</option>
-                            <option value="1">Cartão de crédito</option>
-                            <option value="2">Boleto bancário</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="banco">Banco</label>
-                        <select class="custom-select form-control decorated " id="banco">
-                            <option selected>Escolha uma opção</option>
-                            <option value="1">BB</option>
-                            <option value="2">Itau</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="agencia">Agência</label>
-                        <input type="text" class="form-control" id="agencia" placeholder="Agência">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="conto">Conta corrente</label>
-                        <input type="text" class="form-control" id="conta" placeholder="Conta corrente">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="dataVencimento">Data de Vencimento</label>
-                        <input type="date" class="form-control" id="dataVencimento" placeholder="">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="alterarDataVencimento">Alterar Data de Vencimento</label>
-                        <input type="date" class="form-control" id="alterarDataVencimento" placeholder="">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="periodicidade">Periodicidade taxa extra</label>
-                        <select class="form-control" id="periodicidade">
-                            <option value="-1">Selecione uma opção</option>
-                            <option value="mensal">Mensal</option>
-                            <option value="anual">Anual</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3 ">
-                        <label for="taxa">Taxa extra</label>
-                        <input type="number" step="0.01" min="0" class="form-control" id="taxa" placeholder="Taxa extra">
-                    </div>
-
-                    <div class="form-group col-md-12 ">
-                        <label for="taxa_descricao">Descrição da taxa extra</label>
-                        <input type="number" class="form-control" id="taxa_descricao" placeholder="Descrição da taxa extra">
-                    </div>
-
-
-                    <hr class="style4">
-
-                    <div class="form-group col-md-12">
-                        <label for="obs">Observação </label>
-                        <textarea class="form-control" rows="5" id="obs"></textarea>
-                    </div>
-
-
-                    <hr class="style4">
-
-                    <div class="col-md-3 offset-md-6">
-                        <button type="button" class="btn btn-primary btn-sm " data-toggle="modal" data-target="#modal">
-                            Salvar cadastro
-                        </button>
-                    </div>
-
-                </form>
-
-                <span class="clear"></span>
 
             </div><!-- /CONTENT PANEL -->
 
@@ -403,9 +279,9 @@
             </div><!-- /FOOTER PANEL-->
 
         </div> <!-- /TYPE PANEL -->
-
-    </div>
+    </form>
 </div>
+
 
 
 <!-- Modal -->
@@ -430,26 +306,6 @@
 </div>
 
 
-
-<!-- Modal Produtos detalhe-->
-<div class="modal fade" id="modalProdutoDetalhe" tabindex="-1" role="dialog" aria-labelledby="Janela" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">Detalhes do Produto</h4>
-            </div>
-            <div class="modal-body">
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Como a navegação recarrega a pagina esse script tem que ser usada em cada view -->
 @section Scripts {
@@ -485,6 +341,34 @@
         $(".cpf").mask("999.999.999-99");
         $(".cep").mask("99999-999");
 
+
+
+        $("#btAddEnd").on("click", function () {
+
+
+        
+
+            if ($("#rua").val() != "" && $("#numero").val() != "" && $("#cep").val() != "" && $("#numero").val() != "" && $("#tipo").val() != "" && $("#bairro").val() != "" && $("#cidade").val() != "" && $("#estado").val() != "") {
+
+                if ($("#primeiro").length = 1) { $("#primeiro").remove(); }
+
+                var status = $("#tabela_endereco tbody tr").length;
+
+                if ((status % 2) == 0) {
+                    status = "ativo";
+                } else {
+                    status = "normal";
+                }
+                var html = '<tr valign="middle" class="' + status + '"><td>' + $("#cep").val() + '</td><td>' + $("#rua").val() + '</td><td>' + $("#numero").val() + '</td><td>' + $("#tipo").val() + '</td><td>' + $("#complemento").val() + '</td><td>' + $("#bairro").val() + '</td> <td>' + $("#cidade").val() + '</td><td>' + $("#estado").val() + '</td><td ><button type="button" onclick="excluirRow(this)" class="btn btn-default btn-sm "><i class="fa fa-minus" aria-hidden="true"></i></button></td> </tr>';
+                $("#tabela_endereco tbody").append(html);
+            }
+
+
+        });
+
+        function excluirRow(elemento) {
+            $(elemento).closest("tr").remove();
+        }
 
 
         $("#btAddExc").on("click", function () {

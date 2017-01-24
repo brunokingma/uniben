@@ -15,17 +15,9 @@ namespace Uniben.UI.Controllers
         }
 
 
-     /*
-        [HttpGet]
-        public ActionResult RetornaCnpj(String id)
-        {
-            var DadosCnpj = Servicos.RetornaDadosCnpj(id);
-            byte[] bytes = Encoding.Default.GetBytes(DadosCnpj);
-            DadosCnpj = Encoding.UTF8.GetString(bytes);
-            return Json(DadosCnpj,JsonRequestBehavior.AllowGet);
-        }
+    
 
-    */
+    
 
         public ActionResult CadastroOperadora()
         {

@@ -1,46 +1,64 @@
-﻿using Sistema.Domain.Entities;
+﻿using Sistema.Data.EntiteConfing;
+using Sistema.Domain.Entities;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Linq;
 
 namespace Sistema.Data.Context
 {
-    class SistemaMVCContext: DbContext
+   public class SistemaMVCContext: DbContext
     {
 
         public SistemaMVCContext() : base("Sistema") {
-
+          
         }
 
-        public DbSet<Endereco> Endereco { get; set; }
-        public DbSet<Empresa> Empresa { get; set; }
+                public DbSet<Endereco> Endereco { get; set; }
+                public DbSet<Empresa> Empresa { get; set; }
+                public DbSet<Pessoa> Pessoa { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
+       
+                protected override void OnModelCreating(DbModelBuilder modelBuilder)
+                {
 
-            //configuração do framework
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+                    //configuração do framework
+                    modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+                    modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+                    modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
-            //configuração das tabelas
-            modelBuilder.Properties().Where(p => p.Name == p.ReflectedType.Name + "Id").Configure(p => p.IsKey());
-            modelBuilder.Properties<string>().Configure(p => p.HasColumnType("varchar"));
-            modelBuilder.Properties<string>().Configure(p => p.HasMaxLength(100));
+                    //configuração de cada tabela
+                    modelBuilder.Configurations.Add(new PessoaConfiguration());
+                    modelBuilder.Configurations.Add(new EmpresaConfiguration());
+                    modelBuilder.Configurations.Add(new EnderecoConfiguration());
 
-            base.OnModelCreating(modelBuilder);
-        }
+                    //configuração das tabelas padrão
+                    modelBuilder.Properties().Where(p => p.Name == p.ReflectedType.Name + "Id").Configure(p => p.IsKey());
+                    modelBuilder.Properties<string>().Configure(p => p.HasColumnType("varchar"));
+                    modelBuilder.Properties<string>().Configure(p => p.HasMaxLength(100));           
 
 
-        public override int SaveChanges()
-        {
-            foreach (var entry in ChangeTracker.Entries().Where(Entry => Entry.Entity.GetType().GetProperty()))
-            {
+                    base.OnModelCreating(modelBuilder);
+                }
 
-            }
-            return base.SaveChanges();
-        }
 
+                public override int SaveChanges()
+                {
+                    foreach (var entry in ChangeTracker.Entries().Where(Entry => Entry.Entity.GetType().GetProperty("DataCadastro") != null))
+                    {
+                        if (entry.State == EntityState.Added) {
+                            entry.Property("DataCadastro").CurrentValue = DateTime.Now;
+                        }
+
+                        if (entry.State == EntityState.Modified)
+                        {
+                            entry.Property("DataCadastro").CurrentValue = false;
+                        }
+
+                    }
+                    return base.SaveChanges();
+                }
+                
 
 
 

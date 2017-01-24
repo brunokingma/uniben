@@ -1,0 +1,13 @@
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\bin\Debug\Sistema.Aplication.dll
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\bin\Debug\Sistema.Aplication.pdb
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\bin\Debug\AutoMapper.dll
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\bin\Debug\Sistema.Data.dll
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\bin\Debug\Sistema.Domain.dll
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\bin\Debug\EntityFramework.dll
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\bin\Debug\Sistema.Data.pdb
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\bin\Debug\Sistema.Domain.pdb
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\bin\Debug\AutoMapper.xml
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\bin\Debug\EntityFramework.xml
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\obj\Debug\Sistema.Aplication.csprojResolveAssemblyReference.cache
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\obj\Debug\Sistema.Aplication.dll
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\obj\Debug\Sistema.Aplication.pdb

@@ -22,20 +22,19 @@ namespace Sistema.UI
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/grid").Include(
-                    "~/Scripts/jquery.bs_grid.js",
-                    "~/Scripts/localization/en.min.js"));
-
-
-
-            bundles.Add(new ScriptBundle("~/bundles/pagination").Include(
-                        "~/Scripts/localization/en3.js", "~/Scripts/jquery.bs_pagination.js"));
+            /*
+                        bundles.Add(new ScriptBundle("~/bundles/grid").Include(
+                                "~/Scripts/jquery.bs_grid.js",
+                                "~/Scripts/localization/en.min.js"));                   
 
 
-            bundles.Add(new ScriptBundle("~/bundles/jui_filter").Include(
-                      "~/Scripts/localization/en4.js", "~/Scripts/jquery.jui_filter_rules.js"));
+                        bundles.Add(new ScriptBundle("~/bundles/pagination").Include(
+                                    "~/Scripts/localization/en3.js", "~/Scripts/jquery.bs_pagination.js"));
 
+
+                        bundles.Add(new ScriptBundle("~/bundles/jui_filter").Include(
+                                  "~/Scripts/localization/en4.js", "~/Scripts/jquery.jui_filter_rules.js"));
+                        */
 
             bundles.Add(new ScriptBundle("~/bundles/sistema").Include(
                         "~/Scripts/sistema.js"));
@@ -56,12 +55,16 @@ namespace Sistema.UI
             bundles.Add(new ScriptBundle("~/bundles/multiselect").Include(
                         "~/Scripts/bootstrap-multiselect.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jgrid").Include(
+             "~/Scripts/jsgrid.js"));
+
 
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/font-awesome.css",
-                      "~/Content/jquery.bs_pagination.min.css",
+                      "~/Content/jsgrid.css",
+                      "~/Content/jsgrid-theme.css",
                       "~/Content/site.css",
                       "~/Content/jquery-ui.css",
                       "~/Content/bootstrap-multiselect.css",

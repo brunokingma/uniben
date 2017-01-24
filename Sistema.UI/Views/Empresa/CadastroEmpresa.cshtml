@@ -3,13 +3,12 @@
     ViewBag.Title = "Cadastro de empresa";
 }
 
-
-
-<ol class="breadcrumb">
-    <li><a href="/Home/Index">Principal</a></li>
-    <li class="active">Cadastro de Empresa</li>
-</ol>
-
+<div class="submenu">
+    <ul class="list-inline list-unstyled">
+        <li><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <a href="/Empresa/CadastroEmpresa">Cadastrar Empresa</a></li>
+        <li><i class="fa fa-search" aria-hidden="true"></i> <a href="/Empresa/BuscaEmpresa">Buscar Empresa</a></li>
+    </ul>
+</div>
 
 
 <div class="container" style="margin-top:20px;">
@@ -28,57 +27,62 @@
                 <h4>Dados cadastrais</h4>
                 <hr class="style4" />
 
-                <form>
+                <form method="post" id="formulario">
 
                     <div class="form-group col-md-3">
                         <label for="cnpj">CNPJ</label>
-                        <input type="text" class="form-control cnpj" id="cnpj" maxlength="14" placeholder="CNPJ">
+                        <input type="text" class="form-control cnpj" id="CNPJ" name="CNPJ" maxlength="14" placeholder="CNPJ" required>
                     </div>
 
                     <div class="form-group col-md-4">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Nome">
+                        <input type="text" class="form-control" id="Nome" name="Nome" placeholder="Nome" required>
                     </div>
 
                     <div class="form-group col-md-3">
                         <label for="fantasia">Nome Fantasia</label>
-                        <input type="text" class="form-control" id="fantasia" placeholder="Nome Fantasia">
+                        <input type="text" class="form-control" id="NomeFantasia" name="NomeFantasia" placeholder="Nome Fantasia">
                     </div>
 
                     <div class="form-group col-md-2">
                         <label for="situacao">Situação</label>
-                        <input type="text" class="form-control" id="situacao" placeholder="Situação">
+                        <select class="custom-select form-control decorated " id="Situacao" name="Situacao" placeholder="Situação" required>
+                            <option value="true">ATIVA</option>
+                            <option value="false">INATIVA</option>
+                        </select>
                     </div>
 
                     <div class="form-group col-md-3">
                         <label for="telefone">Telefone</label>
-                        <input type="text" class="form-control" id="telefone" maxlength="14" placeholder="Telefone">
+                        <input type="text" class="form-control telefone" id="Telefone" name="Telefone" maxlength="14" placeholder="Telefone">
                     </div>
 
                     <div class="form-group col-md-4">
                         <label for="email">Email</label>
-                        <input type="text" class="form-control" id="email" placeholder="Email">
+                        <input type="email" class="form-control" id="Email" name="Email" placeholder="Email">
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="abertura">Abertura</label>
-                        <input type="text" class="form-control" id="abertura" placeholder="Abertura">
-                    </div>
-
-                    <div class="form-group col-md-2">
-                        <label for="natureza_juridica">Natureza jurídica</label>
-                        <input type="text" class="form-control" id="natureza_juridica" placeholder="Natureza jurídica">
-                    </div>
-
-                    <div class="form-group col-md-10">
-                        <label for="atividade_principal">Atividade principal</label>
-                        <input type="text" class="form-control" id="atividade_principal" placeholder="Atividade principal">
-                    </div>
-
-                    <div class="form-group col-md-2">
                         <label for="code">Código</label>
-                        <input type="text" class="form-control" id="code" placeholder="Code">
+                        <input type="text" class="form-control" id="Codigo" placeholder="Código" name="Codigo" required>
                     </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="abertura">Data de Abertura</label>
+                        <input type="text" class="form-control data" id="Abertura" name="Abertura" placeholder="Abertura">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="atividade_principal">Atividade principal</label>
+                        <input type="text" class="form-control" id="AtividadePrincipal" name="AtividadePrincipal" placeholder="Atividade principal">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="natureza_juridica">Natureza jurídica</label>
+                        <input type="text" class="form-control" id="NaturezaJuridica" name="NaturezaJuridica" placeholder="Natureza jurídica">
+                    </div>
+
+
 
 
                     <h4>Endereço</h4>
@@ -86,35 +90,35 @@
 
                     <div class="form-group col-md-3">
                         <label for="cep">CEP</label>
-                        <input type="text" class="form-control cep" id="cep" placeholder="CEP">
+                        <input type="text" class="form-control cep" id="cep" placeholder="CEP" name="cep" required>
                     </div>
 
 
                     <div class="form-group col-md-6">
                         <label for="rua">Rua</label>
-                        <input type="text" class="form-control" id="rua" placeholder="Rua">
+                        <input type="text" class="form-control" id="logradouro" placeholder="Rua" name="logradouro" required>
                     </div>
 
                     <div class="form-group col-md-3">
                         <label for="numero">Número</label>
-                        <input type="text" class="form-control" id="numero" placeholder="Número">
+                        <input type="text" class="form-control" id="numero" placeholder="Número" name="numero" required>
                     </div>
 
                     <div class="form-group col-md-3">
                         <label for="complemento">Complemento</label>
-                        <input type="text" class="form-control" id="complemento" placeholder="Complemento">
+                        <input type="text" class="form-control" id="complemento" name="complemento" placeholder="Complemento">
                     </div>
                     <div class="form-group col-md-3">
                         <label for="bairro">Bairro</label>
-                        <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                        <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" required>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="cidade">Cidade</label>
-                        <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                        <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" required>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="estado">Estado</label>
-                        <select class="custom-select form-control decorated " id="estado">
+                        <select class="custom-select form-control decorated " id="estado" name="estado" required>
                             <option selected>Escolha uma opção</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -148,10 +152,8 @@
 
                     <hr class="style4">
 
-                    <div class="col-md-3 offset-md-8">
-                        <button type="button" class="btn btn-primary btn-sm " data-toggle="modal" data-target="#modal">
-                            Salvar cadastro
-                        </button>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary btn-sm pull-right">Salvar Cadastro</button>
                     </div>
 
                 </form>
@@ -172,85 +174,34 @@
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="Janela" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Painel de confimação</h4>
+            </div>
+            <div class="modal-body text-center">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" id="btConfirmar" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <!-- Como a navegação recarrega a pagina esse script tem que ser usada em cada view -->
 @section Scripts {
     <script type="text/javascript">
-
-
-
-        $('#cnpj').keyup(function () {
-
-            var cnpj = $(this).val().replace(/[^a-z0-9]/gmi, "");
-
-            if (cnpj.length == 14) {
-                $.ajax({
-                    method: "GET",
-                    url: "/Operadora/RetornaCnpj/" + cnpj,
-                    success: function (r) {
-
-                        var retorno = JSON.parse(r);
-
-                        if (retorno.status == "OK") {
-
-                            var cep = retorno.cep;
-                            cep = cep.replace(/[^a-z0-9]/gmi, "");
-
-                            $("#rua").val(retorno.logradouro);
-                            $("#bairro").val(retorno.bairro);
-                            $("#cidade").val(retorno.municipio);
-                            $("#estado").val(retorno.uf);
-                            $("#complemento").val(retorno.complemento);
-                            $("#fantasia").val(retorno.fantasia);
-                            $("#numero").val(retorno.numero);
-                            $("#cep").val(cep);
-                            $("#abertura").val(retorno.abertura);
-                            $("#situacao").val(retorno.situacao);
-                            $("#telefone").val(retorno.telefone);
-                            $("#email").val(retorno.email);
-                            $("#nome").val(retorno.nome);
-                            $("#natureza_juridica").val(retorno.natureza_juridica);
-                            $("#atividade_principal").val(retorno.atividade_principal[0].text);
-                            $("#code").val(retorno.atividade_principal[0].code);
-
-                        }
-                    }
-                });
-            }
-
-        });
-
-
-        $('#produto').multiselect({
-            buttonText: function (options, select) {
-                return 'selecione uma opção de produto';
-            },
-            buttonTitle: function (options, select) {
-                var labels = [];
-                options.each(function () {
-                    labels.push($(this).text());
-                });
-
-                $("#grupo").val(" ");
-
-                $.each(labels, function (index, value) {
-                    if (index == 0) {
-                        $("#grupo").val($("#grupo").val() + value);
-                    } else {
-                        $("#grupo").val($("#grupo").val() + " - " + value);
-                    }
-
-                });
-
-                return labels.join(' - ');
-            }
-        });
-
+        submitDados("Empresa","Add")
         $('.nav-pills li:eq(2) a').tab('show');
-        $(".data").mask("99/99/9999", { placeholder: "dd/mm/yyyy" });
-        $(".telefone").mask("(99) 9999-9999");
-        $(".cpf").mask("999.999.999-99");
-        $(".cep").mask("99999-999");
-        $(".cnpj").mask("99.999.999/9999-99");
     </script>
 }
 

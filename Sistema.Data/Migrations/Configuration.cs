@@ -9,7 +9,7 @@ namespace Sistema.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true; 
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Sistema.Data.Context.SistemaMVCContext context)

@@ -44,6 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -157,11 +165,8 @@
     <Content Include="Content\jquery-ui.structure.min.css" />
     <Content Include="Content\jquery-ui.theme.css" />
     <Content Include="Content\jquery-ui.theme.min.css" />
-    <Content Include="Content\jquery.bs_grid.bs2.min.css" />
-    <Content Include="Content\jquery.bs_grid.min.css" />
-    <Content Include="Content\jquery.bs_pagination.min.css" />
-    <Content Include="Content\jquery.jui_filter_rules.bs.css" />
-    <Content Include="Content\jquery.jui_filter_rules.css" />
+    <Content Include="Content\jsgrid-theme.css" />
+    <Content Include="Content\jsgrid.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -187,16 +192,12 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\jquery-ui.min.js" />
-    <Content Include="Scripts\jquery.bs_grid.js" />
-    <Content Include="Scripts\jquery.bs_grid.min.js" />
-    <Content Include="Scripts\jquery.bs_pagination.js" />
-    <Content Include="Scripts\jquery.bs_pagination.min.js" />
-    <Content Include="Scripts\jquery.jui_filter_rules.js" />
     <Content Include="Scripts\jquery.maskedinput.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jsgrid.js" />
     <Content Include="Scripts\locales\ar.js" />
     <Content Include="Scripts\locales\bg.js" />
     <Content Include="Scripts\locales\ca.js" />
@@ -246,7 +247,9 @@
     <Content Include="Scripts\sistema.js" />
     <Content Include="Scripts\vendor\jquery.ui.widget.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -268,12 +271,16 @@
     <Content Include="Views\Produto\CadastroProduto.cshtml" />
     <Content Include="Views\Usuario\Login.cshtml" />
     <Content Include="Scripts\less\bootstrap-multiselect.less" />
-    <Content Include="Views\Contrato.cshtml" />
     <Content Include="Views\Contrato\CadastroContrato.cshtml" />
+    <Content Include="Views\Home\BuscarCadastros.cshtml" />
+    <Content Include="Views\Home\CadastroBasico.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Empresa\BuscaEmpresa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\i18n\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -283,6 +290,18 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CrossCuttingService\CrossCuttingService.csproj">
+      <Project>{A81E0D8E-E427-4E3D-A68D-FA3A5BDA06E8}</Project>
+      <Name>CrossCuttingService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sistema.Aplication\Sistema.Aplication.csproj">
+      <Project>{2B66E1C9-0E21-4C3F-AB62-D0C1AF1A6286}</Project>
+      <Name>Sistema.Aplication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sistema.Data\Sistema.Data.csproj">
+      <Project>{6F6549D8-BD50-4717-B3C5-2E45C4BF44F9}</Project>
+      <Name>Sistema.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sistema.Domain\Sistema.Domain.csproj">
       <Project>{8b86d906-b28e-4312-9528-48386d19b5b1}</Project>
       <Name>Sistema.Domain</Name>

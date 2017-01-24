@@ -2,3 +2,7 @@ C:\Users\bruno.UNIBENJF\Desktop\sistema\Sistema.Domain\bin\Debug\Sistema.Domain.
 C:\Users\bruno.UNIBENJF\Desktop\sistema\Sistema.Domain\bin\Debug\Sistema.Domain.pdb
 C:\Users\bruno.UNIBENJF\Desktop\sistema\Sistema.Domain\obj\Debug\Sistema.Domain.dll
 C:\Users\bruno.UNIBENJF\Desktop\sistema\Sistema.Domain\obj\Debug\Sistema.Domain.pdb
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Domain\bin\Debug\Sistema.Domain.dll
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Domain\bin\Debug\Sistema.Domain.pdb
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Domain\obj\Debug\Sistema.Domain.dll
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Domain\obj\Debug\Sistema.Domain.pdb

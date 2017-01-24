@@ -9,7 +9,7 @@ namespace Sistema.UI.Controllers
     public class ContratoController : Controller
     {
         // GET: Contrato
-        public ActionResult Index()
+        public ActionResult CadastroContrato()
         {
             return View();
         }

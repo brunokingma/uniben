@@ -35,8 +35,16 @@
   <ItemGroup>
     <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\Endereco.cs" />
+    <Compile Include="Entities\Log.cs" />
+    <Compile Include="Entities\LogErro.cs" />
+    <Compile Include="Entities\Pessoa.cs" />
     <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Interfaces\Repository\IBaseRepository.cs" />
+    <Compile Include="Interfaces\Repository\IEmpresaRepository.cs" />
+    <Compile Include="Interfaces\Repository\IEnderecoRepository.cs" />
+    <Compile Include="Interfaces\Services\IEmpresaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EmpresaService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

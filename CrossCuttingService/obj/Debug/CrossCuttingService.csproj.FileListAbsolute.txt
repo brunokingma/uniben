@@ -1,0 +1,7 @@
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\CrossCuttingService\bin\Debug\CrossCuttingService.dll
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\CrossCuttingService\bin\Debug\CrossCuttingService.pdb
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\CrossCuttingService\bin\Debug\Sistema.Domain.dll
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\CrossCuttingService\bin\Debug\Sistema.Domain.pdb
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\CrossCuttingService\obj\Debug\CrossCuttingService.csprojResolveAssemblyReference.cache
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\CrossCuttingService\obj\Debug\CrossCuttingService.dll
+C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\CrossCuttingService\obj\Debug\CrossCuttingService.pdb

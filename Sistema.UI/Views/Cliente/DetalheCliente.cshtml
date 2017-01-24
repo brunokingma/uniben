@@ -12,166 +12,82 @@
 
 <div class="container" style="margin-top:20px;">
 
-    <div class="row">
         <div class="widget widget-gray">
             <!-- TYPE PANEL -->
             <div class="widget-head">
                 <!-- HEAD PANEL -->
-                <h4 class="heading"><i class="fa fa-clipboard"></i> Documentos anexados</h4>
+                <h4 class="heading"><i class="fa fa-file"></i> Contratos</h4>
             </div><!-- /HEAD PANEL -->
 
-            <div class="widget-body" id="widget-body3" style="display: none;">
+            <div class="widget-body" id="widget-body1" style="display:none;">
                 <!-- CONTENT PANEL -->
 
-                <h4>Anexos</h4>
-                <hr class="style4" />
-
                 <ul class="list-group">
-                    <li class="list-group-item">
-                        <span class="anexo"><i class="fa fa-cloud-download fa-lg" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="" data-original-title="Baixar Arquivo"></i> <i class="fa fa-print fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Imprimir arquivo" aria-hidden="true"></i> <i class="fa fa-trash fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Deletar arquivo" aria-hidden="true"></i> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Visualizar" aria-hidden="true"></i> </span>
-                        Documento 01
-                    </li>
-                    <li class="list-group-item zebra">
-                        <span class="anexo"><i class="fa fa-cloud-download fa-lg" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="" data-original-title="Baixar Arquivo"></i> <i class="fa fa-print fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Imprimir arquivo" aria-hidden="true"></i> <i class="fa fa-trash fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Deletar arquivo" aria-hidden="true"></i> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Visualizar" aria-hidden="true"></i> </span>
-                        Documento 02
-                    </li>
-                    <li class="list-group-item">
-                        <span class="anexo"><i class="fa fa-cloud-download fa-lg" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="" data-original-title="Baixar Arquivo"></i> <i class="fa fa-print fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Imprimir arquivo" aria-hidden="true"></i> <i class="fa fa-trash fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Deletar arquivo" aria-hidden="true"></i> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Visualizar" aria-hidden="true"></i> </span>
-                        Documento 03
-                    </li>
+                    <li class="list-group-item">Contrato nº00001 <span class="pull-right"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <i class="fa fa-eye pointer"  data-toggle="modal" data-target="#modalContrato"  aria-hidden="true"></i> </span></li>
+                    <li class="list-group-item">Contrato nº00002 <span class="pull-right"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <i class="fa fa-eye pointer"  data-toggle="modal" data-target="#modalContrato"  aria-hidden="true"></i> </span></li>
+                    <li class="list-group-item">Contrato nº00003 <span class="pull-right"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <i class="fa fa-eye pointer"  data-toggle="modal" data-target="#modalContrato"  aria-hidden="true"></i> </span></li>
                 </ul>
 
-                <a href="/Home/Anexo" class="btn btn-primary btn-sm">
-                    Anexar documentos
-                </a>
-
-                <span class="clear"></span>
-
-            </div><!-- /CONTENT PANEL -->
+                <!-- /CONTENT PANEL -->
+            </div>
 
             <div class="widget-footer">
                 <!-- FOOTER PANEL-->
-                <a href="#" onclick="toogle(this)" class="fa fa-chevron-up fa-1x" ><i></i></a>
+                <a href="#" id="toggleContrato" onclick="toogle(this)" class="fa fa-chevron-down fa-1x" title=""><i></i></a>
             </div><!-- /FOOTER PANEL-->
 
         </div> <!-- /TYPE PANEL -->
+ 
 
-    </div>
+    <div class="widget widget-gray">
+        <!-- TYPE PANEL -->
+        <div class="widget-head">
+            <!-- HEAD PANEL -->
+            <h4 class="heading"><i class="fa fa-file"></i>Ficha Financeira</h4>
+        </div><!-- /HEAD PANEL -->
 
-    <div class="row">
+        <div class="widget-body" id="widget-body1" style="display:none;">
+            <!-- CONTENT PANEL -->
+
+
+            <!-- /CONTENT PANEL -->
+        </div>
+
+        <div class="widget-footer">
+            <!-- FOOTER PANEL-->
+            <a href="#" id="toggleContrato" onclick="toogle(this)" class="fa fa-chevron-down fa-1x" title=""><i></i></a>
+        </div><!-- /FOOTER PANEL-->
+
+    </div> <!-- /TYPE PANEL -->
+
+
+    <form>
+
         <div class="widget widget-gray">
             <!-- TYPE PANEL -->
             <div class="widget-head">
                 <!-- HEAD PANEL -->
-                <h4 class="heading"><i class="fa fa-tags"></i> Produtos vinculados</h4>
+                <h4 class="heading"><i class="fa fa-archive"></i> Dados cadastrais</h4>
             </div><!-- /HEAD PANEL -->
 
-            <div class="widget-body" id="widget-body4" style="display: none;">
+            <div class="widget-body" id="widget-body1"  style="display:none;" >
                 <!-- CONTENT PANEL -->
 
-                <h4>Produtos</h4>
-                <hr class="style4" />
+                <div class="row">
+                    <h4>Dados pessoais</h4>
 
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <span class="anexo"><i class="fa fa-print fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Imprimir arquivo" aria-hidden="true"></i> <i class="fa fa-trash fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Desativar" aria-hidden="true"></i></span>
-                        <b>Produto:</b> produto 01 - <b>Data de vigência:</b> 01/03/2016
-                    </li>
-                    <li class="list-group-item zebra">
-                        <span class="anexo"><i class="fa fa-print fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Imprimir arquivo" aria-hidden="true"></i> <i class="fa fa-trash fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Desativar" aria-hidden="true"></i></span>
-                        <b>Produto:</b> produto 02 - <b>Data de vigência:</b> 01/03/2016
-                    </li>
-                    <li class="list-group-item">
-                        <span class="anexo"><i class="fa fa-print fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Imprimir arquivo" aria-hidden="true"></i> <i class="fa fa-trash fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Desativar" aria-hidden="true"></i></span>
-                        <b>Produto:</b> produto 03 - <b>Data de vigência:</b> 01/03/2016
-                    </li>
-                </ul>
-
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal">
-                    Adicionar produto
-                </button>
+                    <hr class="style4" />
 
 
 
-                <span class="clear"></span>
 
-            </div><!-- /CONTENT PANEL -->
-
-            <div class="widget-footer">
-                <!-- FOOTER PANEL-->
-                <a href="#" onclick="toogle(this)" class="fa fa-chevron-up fa-1x"><i></i></a>
-            </div><!-- /FOOTER PANEL-->
-
-        </div> <!-- /TYPE PANEL -->
-
-    </div>
-
-
-    <div class="row">
-        <div class="widget widget-gray">
-            <!-- TYPE PANEL -->
-            <div class="widget-head">
-                <!-- HEAD PANEL -->
-                <h4 class="heading"><i class="fa fa-group"></i> Dependentes vinculados</h4>
-            </div><!-- /HEAD PANEL -->
-
-            <div class="widget-body" id="widget-body5" style="display: none;">
-                <!-- CONTENT PANEL -->
-
-                <h4>Dependentes</h4>
-                <hr class="style4" />
-
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <b>Nome:</b> teste - <b>Parentesco:</b> filho - <b>Produto:</b> produto01 <span class="anexo"><i class="fa fa-print fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Imprimir arquivo" aria-hidden="true"></i> <i class="fa fa-trash fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Desativar" aria-hidden="true"></i> <i class="fa fa-edit fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="editar" aria-hidden="true"></i></span>
-                    </li>
-                    <li class="list-group-item zebra">
-                        <b>Nome:</b> teste - <b>Parentesco:</b> filho - <b>Produto:</b> produto01 <span class="anexo"><i class="fa fa-print fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Imprimir arquivo" aria-hidden="true"></i> <i class="fa fa-trash fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Desativar" aria-hidden="true"></i> <i class="fa fa-edit fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="editar" aria-hidden="true"></i></span>
-                    </li>
-                    <li class="list-group-item">
-                        <b>Nome:</b> teste - <b>Parentesco:</b> filho - <b>Produto:</b> produto01 <span class="anexo"><i class="fa fa-print fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Imprimir arquivo" aria-hidden="true"></i> <i class="fa fa-trash fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Desativar" aria-hidden="true"></i> <i class="fa fa-edit fa-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="editar" aria-hidden="true"></i></span>
-                    </li>
-                </ul>
-                <a href="/Home/CadastroDependente" class="btn btn-primary btn-sm">
-                    Vincular dependente
-                </a>
-                <span class="clear"></span>
-
-            </div><!-- /CONTENT PANEL -->
-
-            <div class="widget-footer">
-                <!-- FOOTER PANEL-->
-                <a href="#" onclick="toogle(this)" class="fa fa-chevron-up fa-1x"><i></i></a>
-            </div><!-- /FOOTER PANEL-->
-
-        </div> <!-- /TYPE PANEL -->
-
-    </div>
-
-
-    <div class="row">
-        <div class="widget widget-gray">
-            <!-- TYPE PANEL -->
-            <div class="widget-head">
-                <!-- HEAD PANEL -->
-                <h4 class="heading"><i class="fa fa-archive"></i> Cadastro do cliente</h4>
-            </div><!-- /HEAD PANEL -->
-
-            <div class="widget-body" id="widget-body1">
-                <!-- CONTENT PANEL -->
-
-                <h4>Dados pessoais</h4>
-                <hr class="style4" />
-
-                <form>
-
-                    <div class="form-group col-md-8">
-                        <label for="nome">Nome completo</label>
+                    <div class="form-group col-md-6">
+                        <label for="nome">*Nome completo</label>
                         <input type="text" class="form-control" id="nome" placeholder="Nome completo">
                     </div>
 
 
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-6">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" placeholder="Email">
                     </div>
@@ -181,18 +97,24 @@
                         <input type="text" class="form-control telefone" id="telefone" placeholder="Telefone">
                     </div>
 
+
                     <div class="form-group col-md-3">
-                        <label for="cpf">CPF</label>
+                        <label for="telefone">Celular</label>
+                        <input type="text" class="form-control telefone" id="telefone" placeholder="Telefone">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="cpf">*CPF</label>
                         <input type="text" class="form-control cpf" id="cpf" placeholder="CPF">
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="rg">RG</label>
+                        <label for="rg">*RG</label>
                         <input type="text" class="form-control" id="rg" placeholder="RG">
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="civil">Estado civil</label>
+                        <label for="civil">*Estado civil</label>
                         <select class="custom-select form-control" id="civil">
                             <option selected>Escolha uma opção</option>
                             <option value="1">Solteiro</option>
@@ -202,12 +124,12 @@
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="nascimento">Data de nascimento</label>
+                        <label for="nascimento">*Data de nascimento</label>
                         <input type="text" class="form-control data" id="nascimento" placeholder="Data de nascimento">
                     </div>
 
-                    <div class="form-group col-md-3">
-                        <label for="sexo">Sexo</label>
+                    <div class="form-group col-md-2">
+                        <label for="sexo">*Sexo</label>
                         <select class="custom-select form-control decorated " id="sexo">
                             <option selected>Escolha uma opção</option>
                             <option value="1">Masculino</option>
@@ -215,81 +137,34 @@
                         </select>
                     </div>
 
-                    <div class="form-group col-md-3">
-                        <label for="naturalidade">Naturalidade</label>
+                    <div class="form-group col-md-2">
+                        <label for="naturalidade">*Naturalidade</label>
                         <input type="text" class="form-control" id="naturalidade" placeholder="Naturalidade">
                     </div>
 
 
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-2">
                         <label for="sus">Cartão SUS</label>
                         <input type="text" class="form-control" id="sus" placeholder="Cartão SUS">
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="mae">Nome da mãe</label>
+                        <label for="mae">*Nome da mãe</label>
                         <input type="text" class="form-control" id="mae" placeholder="Nome da mãe">
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="pai">Nome do pai</label>
+                        <label for="pai">*Nome do pai</label>
                         <input type="text" class="form-control" id="pai" placeholder="Nome do pai">
                     </div>
 
-                    <h4>Endereço</h4>
+                </div>
+
+                <div class="row">
+                    <h4>Dados Financeiros</h4>
                     <hr class="style4">
-
-                    <div class="form-group col-md-3">
-                        <label for="cep">CEP</label>
-                        <input type="text" class="form-control cep" id="cep" placeholder="CEP">
-                    </div>
-
 
                     <div class="form-group col-md-6">
-                        <label for="rua">Rua</label>
-                        <input type="text" class="form-control" id="rua" placeholder="Rua">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="numero">Número</label>
-                        <input type="text" class="form-control" id="numero" placeholder="Número">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="complemento">Complemento</label>
-                        <input type="text" class="form-control" id="complemento" placeholder="Complemento">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="bairro">Bairro</label>
-                        <input type="text" class="form-control" id="bairro" placeholder="Bairro">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" class="form-control" id="cidade" placeholder="Cidade">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="estado">Estado</label>
-                        <select class="custom-select form-control decorated " id="estado">
-                            <option selected>Escolha uma opção</option>
-                            <option value="1">Masculino</option>
-                            <option value="2">Feminino</option>
-                        </select>
-                    </div>
-
-
-                    <h4>Financeiro</h4>
-                    <hr class="style4">
-
-                    <div class="form-group col-md-3">
-                        <label for="pagamento">Modo de pagamento</label>
-                        <select class="custom-select form-control decorated " id="pagamento">
-                            <option selected>Escolha uma opção</option>
-                            <option value="1">Cartão de crédito</option>
-                            <option value="2">Boleto bancário</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3">
                         <label for="banco">Banco</label>
                         <select class="custom-select form-control decorated " id="banco">
                             <option selected>Escolha uma opção</option>
@@ -308,104 +183,170 @@
                         <input type="text" class="form-control" id="conta" placeholder="Conta corrente">
                     </div>
 
+                </div>
+
+                <div class="row">
+
+                    <h4>Endereço</h4>
+                    <hr class="style4">
+
                     <div class="form-group col-md-3">
-                        <label for="dataVencimento">Data de Vencimento</label>
-                        <input type="date" class="form-control" id="dataVencimento" placeholder="">
+                        <label for="cep">CEP</label>
+                        <input type="text" class="form-control cep" id="cep" placeholder="CEP">
+                    </div>
+
+
+                    <div class="form-group col-md-3">
+                        <label for="rua">*Rua</label>
+                        <input type="text" class="form-control" id="rua" placeholder="Rua">
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="alterarDataVencimento">Alterar Data de Vencimento</label>
-                        <input type="date" class="form-control" id="alterarDataVencimento" placeholder="">
+                        <label for="numero">*Número</label>
+                        <input type="text" class="form-control" id="numero" placeholder="Número">
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="periodicidade">Periodicidade taxa extra</label>
-                        <select class="form-control" id="periodicidade">
-                            <option value="-1">Selecione uma opção</option>
-                            <option value="mensal">Mensal</option>
-                            <option value="anual">Anual</option>
+                        <label for="tipo">*Tipo de endereço</label>
+                        <select class="custom-select form-control decorated " id="tipo">
+                            <option selected>Escolha uma opção</option>
+                            <option value="cobranca">Cobrança</option>
+                            <option value="Residencial">Residencial</option>
                         </select>
                     </div>
 
-                    <div class="form-group col-md-3 ">
-                        <label for="taxa">Taxa extra</label>
-                        <input type="number" class="form-control" id="taxa" placeholder="Taxa extra">
+                    <div class="form-group col-md-3">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" class="form-control" id="complemento" placeholder="Complemento">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="bairro">*Bairro</label>
+                        <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="cidade">*Cidade</label>
+                        <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="estado">*Estado</label>
+                        <select class="custom-select form-control decorated " id="estado">
+                            <option selected>Escolha uma opção</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <table class="table" id="tabela_endereco">
+                            <thead>
+                                <tr class="cabecalho_tabela">
+                                    <th>CEP</th>
+                                    <th>Rua</th>
+                                    <th>Número</th>
+                                    <th>Tipo de Endereço</th>
+                                    <th>Complemento</th>
+                                    <th>Bairro</th>
+                                    <th>Cidade</th>
+                                    <th>Estado</th>
+                                    <th>Excluir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="primeiro">
+                                    <td colspan="9" align="center" class="normal">Nenhum endereço cadastrado</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    <div class="form-group col-md-12 ">
-                        <label for="taxa_descricao">Descrição da taxa extra</label>
-                        <input type="number" class="form-control" id="taxa_descricao" placeholder="Descrição da taxa extra">
+                </div>
+                <div class="row">
+
+                    <hr class="style4">
+
+                    <div class="form-group col-md-12">
+                        <label for="obs">Observação </label>
+                        <textarea class="form-control" rows="5" id="obs"></textarea>
                     </div>
 
 
-                    <div class="col-md-12">
-                        <button type="button" class="btn btn-primary btn-sm ">
-                            Alterar cadastro
+                    <hr class="style4">
+
+                    <div class="col-md-3 offset-md-6">
+                        <button type="button" class="btn btn-primary btn-sm " data-toggle="modal" data-target="#modal">
+                            Editar cadastro
                         </button>
                     </div>
+                </div>
 
-                </form>
 
-                <hr class="style4">
 
-                <span class="clear"></span>
 
             </div><!-- /CONTENT PANEL -->
 
             <div class="widget-footer">
                 <!-- FOOTER PANEL-->
-                <!-- <a href="#" class="fa fa-minus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title=""><i></i></a>
-                <a href="#" class="fa fa-pencil fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PENCIL"><i></i></a>
-                 <a href="#" class="fa fa-search fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-SEARCH"><i></i></a>
-                 <a href="#" class="fa fa-plus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
-                -->
-                <a href="#" onclick="toogle(this)" class="fa fa-chevron-up fa-1x"><i></i></a>
+                <a href="#" id="toggle1" class="fa fa-chevron-down fa-1x" onclick="toogle(this)" title=""><i></i></a>
             </div><!-- /FOOTER PANEL-->
 
         </div> <!-- /TYPE PANEL -->
-
-    </div>
+    </form>
 </div>
 
 
 <!-- Modal -->
-<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="Janela" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" id="modalContrato" tabindex="-1" role="dialog" aria-labelledby="Janela" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">Adicionar produto</h4>
+                <h4 class="modal-title" id="myModalLabel">Contrato</h4>
             </div>
-            <div class="modal-body">
-                <h4>Produtos</h4>
-                <hr class="style4">
-
-                <div class="form-group col-md-12">
-
-                    <select class="form-control" multiple="multiple" id="produto_alteracao">
-                        <option value="1">produto01</option>
-                        <option value="2">produto02</option>
-                        <option value="3">produto03</option>
-                        <option value="4">produto04</option>
-                    </select>
-                </div>
-
-
-                <div class="form-group col-md-12">
-                    <textarea disabled class="form-control" rows="3" id="grupo_alteracao">Produto selecionado </textarea>
-                </div>
-
-                <hr class="style4">
+            <div class="modal-body text-center">
+               <div class="row">
+                   <div class="col-md-10"></div>
+                   <div class="col-md-2"> <i class="fa fa-print fa-3x pointer" aria-hidden="true"></i></div>
+               </div>
+               <div class="row">
+                   Exibe dados do contrato
+               </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Salvar</button>
             </div>
         </div>
     </div>
 </div>
+
 
 
 <!-- Como a navegação recarrega a pagina esse script tem que ser usada em cada view -->

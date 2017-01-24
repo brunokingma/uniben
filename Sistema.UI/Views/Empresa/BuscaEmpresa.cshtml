@@ -1,0 +1,315 @@
+﻿
+@{
+    ViewBag.Title = "BuscaEmpresa";
+}
+
+
+<div class="submenu">
+    <ul class="list-inline list-unstyled">
+        <li><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <a href="/Empresa/CadastroEmpresa">Cadastrar Empresa</a></li>
+        <li><i class="fa fa-search" aria-hidden="true"></i> <a href="/Empresa/BuscaEmpresa">Buscar Empresa</a></li>
+    </ul>
+</div>
+
+
+<div class="container" style="margin-top:20px;">
+
+    <div class="row">
+        <div class="widget widget-gray">
+            <!-- TYPE PANEL -->
+            <div class="widget-head">
+                <!-- HEAD PANEL -->
+                <h4 class="heading"><i class="fa fa-archive"></i> Buscar Empresa</h4>
+            </div><!-- /HEAD PANEL -->
+
+            <div class="widget-body" id="widget-body1">
+                <!-- CONTENT PANEL -->
+                <form id="formulario_busca" >
+                    <div class="col-lg-9">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="busca" placeholder="Nome da empresa" required>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block" id="btbusca"><i class="fa fa-cog fa-spin fa-1x fa-fw hide"></i> <i class="fa fa-search" aria-hidden="true"></i> Buscar </button>
+                        </div>
+                    </div>
+                </form>
+                <span class="clear"></span>
+                <div id="jsGrid"></div>
+            </div><!-- /CONTENT PANEL -->
+
+            <div class="widget-footer">
+                <!-- FOOTER PANEL-->
+                <a href="#" id="toggle1" class="fa fa-chevron-up fa-1x" title=""><i></i></a>
+            </div><!-- /FOOTER PANEL-->
+
+        </div> <!-- /TYPE PANEL -->
+
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="Janela" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Atualizar dados cadastrais</h4>
+            </div>
+            <div class="modal-body" style="height:500px;">
+
+                <form method="post" id="formulario">
+
+                    <input type="hidden" id="EmpresaId" name="EmpresaId">
+                    <input type="hidden" id="EnderecoId" name="EnderecoId">
+
+                    <div class="form-group col-md-3">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" class="form-control cnpj" id="CNPJ" name="CNPJ" maxlength="14" placeholder="CNPJ" required>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="Nome" name="Nome" placeholder="Nome" required>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="fantasia">Nome Fantasia</label>
+                        <input type="text" class="form-control" id="NomeFantasia" name="NomeFantasia" placeholder="Nome Fantasia">
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="situacao">Situação</label>
+                        <select class="custom-select form-control decorated " id="Situacao" name="Situacao" placeholder="Situação" required>
+                            <option value="true">ATIVA</option>
+                            <option value="false">INATIVA</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" class="form-control telefone" id="Telefone" name="Telefone" maxlength="14" placeholder="Telefone">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="Email" name="Email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="code">Código</label>
+                        <input type="text" class="form-control" id="Codigo" placeholder="Código" name="Codigo" required>
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="abertura">Data de Abertura</label>
+                        <input type="text" class="form-control data" id="Abertura" name="Abertura" placeholder="Abertura">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="atividade_principal">Atividade principal</label>
+                        <input type="text" class="form-control" id="AtividadePrincipal" name="AtividadePrincipal" placeholder="Atividade principal">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="natureza_juridica">Natureza jurídica</label>
+                        <input type="text" class="form-control" id="NaturezaJuridica" name="NaturezaJuridica" placeholder="Natureza jurídica">
+                    </div>
+
+
+
+
+                    <h4>Endereço</h4>
+                    <hr class="style4">
+
+                    <div class="form-group col-md-3">
+                        <label for="cep">CEP</label>
+                        <input type="text" class="form-control cep" id="cep" placeholder="CEP" name="cep" required>
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        <label for="rua">Rua</label>
+                        <input type="text" class="form-control" id="logradouro" placeholder="Rua" name="logradouro" required>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="numero">Número</label>
+                        <input type="text" class="form-control" id="numero" placeholder="Número" name="numero" required>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" class="form-control" id="complemento" name="complemento" placeholder="Complemento">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" required>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" required>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="estado">Estado</label>
+                        <select class="custom-select form-control decorated " id="estado" name="estado" required>
+                            <option selected>Escolha uma opção</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <button type="button" id="btConfirmar" class="btn btn-primary">Atualizar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Como a navegação recarrega a pagina esse script tem que ser usada em cada view -->
+@section Scripts {
+    <script type="text/javascript">
+
+        $("#formulario_busca").submit(function (event) {
+           
+            event.preventDefault();
+            
+
+
+            $('#btbusca .fa-search').fadeOut();
+            $(".fa-fw").removeClass("hide")
+
+            $.ajax({
+                method: "POST",
+                url: "/Empresa/Listar/",
+                data: {"nome":$("#busca").val()},
+                dataType: "json",
+                success: function (r) {
+                    var r = JSON.parse(r);
+
+                    $('#btbusca .fa-search').fadeIn();
+                    $(".fa-fw").addClass("hide")
+
+                    $("#jsGrid").jsGrid({
+                        width: "100%",
+                        height: "auto",
+                        inserting: false,
+                        editing: false,
+                        sorting: true,
+                        paging: true,
+                        loadIndication: true,
+                        pageSize: 4,
+                        pageButtonCount: 5,
+                        noDataContent: "Nem resultado encontrado.",
+                        pagerFormat: "Páginas: {first} {prev} {pages} {next} {last}    {pageIndex} de {pageCount}",
+                        pagePrevText: "Página Anterior",
+                        pageNextText: "Próxima Página",
+                        pageFirstText: "Primeira Página",
+                        pageLastText: "Última Página",
+                        data: r,
+                        rowDoubleClick: function (objeto) {
+                            carregaDados(objeto.item);
+                        },
+                        fields: [
+                            { name: "EmpresaId", type: "text", width: 10, visible: false, },
+                            { name: "Nome", type: "text", width: 150 },
+                            { name: "CNPJ", type: "number", width: 150, align: "center" },
+                            {
+                                type: "control",
+                                editButton: false,
+                                deleteButton: false,
+                                modeSwitchButton: false,
+                                itemTemplate: function (value, item) {
+                                    var $result = jsGrid.fields.control.prototype.itemTemplate.apply(this, arguments);
+                                    var $Button = $("<button type='button' onclick='carregaDados(" + item.EmpresaId + ",\"visualizar\")' class='btn btn-primary'><i class='fa fa-search' aria-hidden='true' ></i> </button> <button type='button'  onclick='editar(" + item.EmpresaId + ")' class='btn btn-primary'><i class='fa fa-edit' aria-hidden='true' > </i></button>  <button type='button'  onclick='apagar(" + item.EmpresaId + ")'  class='btn btn-primary'><i class='fa fa-trash' aria-hidden='true' > </i></button>");
+                                    return $result.add($Button);
+                                }
+                            }
+                        ]
+                    });
+
+                }
+            });
+                       
+        });
+
+
+        $('#btConfirmar').on('click', function () {
+
+            $('#btConfirmar').html("<i class=\"fa fa-cog fa-spin fa-1x fa-fw\"></i> Carregando...");
+            $('#btConfirmar').attr("disabled", "disabled");
+            $.ajax({
+                method: "POST",
+                url: "/Empresa/Add",
+                data: $('#formulario').serialize(),
+                dataType: "json",
+                success: function (r) {
+                    var r = JSON.parse(r);
+                    $('#btConfirmar').html("Salvar");
+
+                    if (r.retorno == 'true') {
+                        var sucesso = '<div class="alert alert-success"><i class="fa fa-floppy-o fa-3x" aria-hidden="true"></i> <h4>Cadastro realizado com sucesso.</h4></div>';
+                        $('#modal .modal-body').html(sucesso);
+                        $('#formulario')[0].reset();
+                    } else {
+                        var erro = '<div class="alert alert-danger"><i class="fa fa-floppy-o fa-3x" aria-hidden="true"></i> <h4>Ocorreu um erro ao realizar o cadastro.</h4></div>';
+                        $('#modal .modal-body').html(erro);
+                    }
+
+                }
+            });
+        });
+
+
+
+
+
+        $('.nav-pills li:eq(2) a').tab('show');
+
+
+
+    </script>
+}
+
+
+
+
