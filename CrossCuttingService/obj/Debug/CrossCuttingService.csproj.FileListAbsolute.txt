@@ -5,3 +5,10 @@ C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\CrossCuttingService\bin\Debug\Sis
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\CrossCuttingService\obj\Debug\CrossCuttingService.csprojResolveAssemblyReference.cache
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\CrossCuttingService\obj\Debug\CrossCuttingService.dll
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\CrossCuttingService\obj\Debug\CrossCuttingService.pdb
+F:\uniben\uniben\CrossCuttingService\bin\Debug\CrossCuttingService.dll
+F:\uniben\uniben\CrossCuttingService\bin\Debug\CrossCuttingService.pdb
+F:\uniben\uniben\CrossCuttingService\bin\Debug\Sistema.Domain.dll
+F:\uniben\uniben\CrossCuttingService\bin\Debug\Sistema.Domain.pdb
+F:\uniben\uniben\CrossCuttingService\obj\Debug\CrossCuttingService.csprojResolveAssemblyReference.cache
+F:\uniben\uniben\CrossCuttingService\obj\Debug\CrossCuttingService.dll
+F:\uniben\uniben\CrossCuttingService\obj\Debug\CrossCuttingService.pdb

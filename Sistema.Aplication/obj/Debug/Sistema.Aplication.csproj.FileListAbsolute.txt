@@ -11,3 +11,4 @@ C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\bin\Debug\Enti
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\obj\Debug\Sistema.Aplication.csprojResolveAssemblyReference.cache
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\obj\Debug\Sistema.Aplication.dll
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Aplication\obj\Debug\Sistema.Aplication.pdb
+F:\uniben\uniben\Sistema.Aplication\obj\Debug\Sistema.Aplication.csprojResolveAssemblyReference.cache

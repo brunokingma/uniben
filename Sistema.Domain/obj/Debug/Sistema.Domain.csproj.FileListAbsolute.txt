@@ -6,3 +6,7 @@ C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Domain\bin\Debug\Sistema.
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Domain\bin\Debug\Sistema.Domain.pdb
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Domain\obj\Debug\Sistema.Domain.dll
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Domain\obj\Debug\Sistema.Domain.pdb
+F:\uniben\uniben\Sistema.Domain\bin\Debug\Sistema.Domain.dll
+F:\uniben\uniben\Sistema.Domain\bin\Debug\Sistema.Domain.pdb
+F:\uniben\uniben\Sistema.Domain\obj\Debug\Sistema.Domain.dll
+F:\uniben\uniben\Sistema.Domain\obj\Debug\Sistema.Domain.pdb

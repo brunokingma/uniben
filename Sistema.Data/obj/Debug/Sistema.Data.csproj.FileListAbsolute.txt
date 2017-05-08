@@ -22,3 +22,17 @@ C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Data\bin\Debug\EntityFram
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Data\obj\Debug\Sistema.Data.csprojResolveAssemblyReference.cache
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Data\obj\Debug\Sistema.Data.dll
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.Data\obj\Debug\Sistema.Data.pdb
+F:\uniben\uniben\Sistema.Data\bin\Debug\Sistema.Data.dll.config
+F:\uniben\uniben\Sistema.Data\bin\Debug\Sistema.Data.dll
+F:\uniben\uniben\Sistema.Data\bin\Debug\Sistema.Data.pdb
+F:\uniben\uniben\Sistema.Data\bin\Debug\CrossCuttingService.dll
+F:\uniben\uniben\Sistema.Data\bin\Debug\EntityFramework.dll
+F:\uniben\uniben\Sistema.Data\bin\Debug\EntityFramework.SqlServer.dll
+F:\uniben\uniben\Sistema.Data\bin\Debug\Sistema.Domain.dll
+F:\uniben\uniben\Sistema.Data\bin\Debug\CrossCuttingService.pdb
+F:\uniben\uniben\Sistema.Data\bin\Debug\Sistema.Domain.pdb
+F:\uniben\uniben\Sistema.Data\bin\Debug\EntityFramework.xml
+F:\uniben\uniben\Sistema.Data\bin\Debug\EntityFramework.SqlServer.xml
+F:\uniben\uniben\Sistema.Data\obj\Debug\Sistema.Data.csprojResolveAssemblyReference.cache
+F:\uniben\uniben\Sistema.Data\obj\Debug\Sistema.Data.dll
+F:\uniben\uniben\Sistema.Data\obj\Debug\Sistema.Data.pdb

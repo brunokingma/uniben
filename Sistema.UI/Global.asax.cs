@@ -1,7 +1,7 @@
-﻿using Sistema.Aplication.AutoMapper;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Sistema.UI.AutoMapper;
 
 namespace Sistema.UI
 {

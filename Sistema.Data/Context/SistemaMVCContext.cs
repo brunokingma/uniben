@@ -1,4 +1,4 @@
-﻿using Sistema.Data.EntiteConfing;
+﻿using Sistema.Data.EntitiesConfig;
 using Sistema.Domain.Entities;
 using System;
 using System.Data.Entity;

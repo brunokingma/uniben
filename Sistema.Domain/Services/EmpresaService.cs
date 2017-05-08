@@ -1,9 +1,6 @@
 ﻿using Sistema.Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Sistema.Domain.Entities;
 using Sistema.Domain.Interfaces.Repository;
 
@@ -35,7 +32,7 @@ namespace Sistema.Domain.Services
             GC.SuppressFinalize(this);
         }
 
-        public Empresa ObterPorCNPJ(string cnpj)
+        public Empresa ObterPorCnpj(string cnpj)
         {
           return _empresaRepository.BuscarPorCNPJ(cnpj);
         }

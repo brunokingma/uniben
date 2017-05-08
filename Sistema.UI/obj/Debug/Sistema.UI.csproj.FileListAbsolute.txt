@@ -94,3 +94,4 @@ C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.UI\bin\AutoMapper.xml
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.UI\obj\Debug\Sistema.UI.csprojResolveAssemblyReference.cache
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.UI\obj\Debug\Sistema.UI.dll
 C:\Users\bruno.UNIBENJF\Desktop\sistema\uniben\Sistema.UI\obj\Debug\Sistema.UI.pdb
+F:\uniben\uniben\Sistema.UI\obj\Debug\Sistema.UI.csprojResolveAssemblyReference.cache

@@ -1,7 +1,7 @@
 ﻿using Sistema.Aplication.Interface;
 using System;
 using System.Collections.Generic;
-using Sistema.Aplication.ViewModels;
+using Sistema.UI.ViewModels;
 using Sistema.Data.Repositories;
 using Sistema.Domain.Entities;
 using AutoMapper;
@@ -32,7 +32,7 @@ namespace Sistema.Aplication
             throw new NotImplementedException();
         }
 
-        public EmpresaViewModel ObterPorCNPJ(string cnpj)
+        public EmpresaViewModel ObterPorCnpj(string cnpj)
         {
             throw new NotImplementedException();
         }

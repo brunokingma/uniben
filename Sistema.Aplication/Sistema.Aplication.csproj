@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sistema.Aplication</RootNamespace>
     <AssemblyName>Sistema.Aplication</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -46,18 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoMapper\AutoMapperConfig.cs" />
-    <Compile Include="AutoMapper\DomainToViewModelMappingProfile.cs" />
-    <Compile Include="AutoMapper\ViewModelToDomainMappingProfile.cs" />
     <Compile Include="EmpresaAppService.cs" />
     <Compile Include="Interface\IEmpresaAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\EmpresaEnderecoViewModel.cs" />
-    <Compile Include="ViewModels\EmpresaViewModel.cs" />
-    <Compile Include="ViewModels\EnderecoViewModel.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\CrossCuttingService\CrossCuttingService.csproj">
+      <Project>{a81e0d8e-e427-4e3d-a68d-fa3a5bda06e8}</Project>
+      <Name>CrossCuttingService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sistema.Data\Sistema.Data.csproj">
       <Project>{6f6549d8-bd50-4717-b3c5-2e45c4bf44f9}</Project>
       <Name>Sistema.Data</Name>
@@ -66,9 +63,10 @@
       <Project>{8b86d906-b28e-4312-9528-48386d19b5b1}</Project>
       <Name>Sistema.Domain</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\Sistema.UI\Sistema.UI.csproj">
+      <Project>{15bddb91-32b6-466b-883e-a3eceec33424}</Project>
+      <Name>Sistema.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
